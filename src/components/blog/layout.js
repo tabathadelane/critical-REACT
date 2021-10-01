@@ -1,7 +1,7 @@
 import React from "react"
 import { Global, css } from "@emotion/react"
 import styled from "@emotion/styled"
-import Header from "./blog/header.js"
+import Header from "./header.js"
 
 const Wrapper = styled("div")`
   padding: 10px;
@@ -24,7 +24,7 @@ export default function Layout({ children }) {
           @font-face {
             font-family: "Friz";
             src: local("FrizQuadrata-Regular"),
-              url("../fonts/FrizQuadrata-Regular.ttf") format("truetype");
+              url("....//fonts/FrizQuadrata-Regular.ttf") format("truetype");
           }
           @font-face {
             font-family: "Masq";

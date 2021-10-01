@@ -2,8 +2,7 @@ import { graphql, Link } from "gatsby"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 import React from "react"
 
-import Layout from "../components/layout"
-import Header from "./header"
+import Layout from "../blog/layout"
 import SideBar from "./side-bar"
 
 export const query = graphql`
@@ -22,11 +21,12 @@ export default ({ data }) => {
   const { frontmatter, body } = data.mdx
   return (
     <Layout>
-      <Header />
       <div class="flex-container">
-        <SideBar />
-        <div class="flex-item">
-          <Link to="/">
+        <div>
+          <SideBar />
+        </div>
+        <div>
+          <Link to="/blog">
             <h4 class="link home-link">&lt;&lt;&lt; Back Home</h4>
           </Link>
           <h2>{frontmatter.title}</h2>

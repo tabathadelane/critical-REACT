@@ -1,14 +1,12 @@
 import * as React from "react"
 import { graphql, Link, useStaticQuery } from "gatsby"
 
-import Layout from "../components/layout"
-import Header from "../components/header"
-
-const Archive = () => {
+const SideBar = () => {
   const data = useStaticQuery(graphql`
     query {
       allMdx(
         sort: { fields: [frontmatter___date], order: DESC }
+        limit: 3
         filter: { frontmatter: { published: { eq: true } } }
       ) {
         nodes {
@@ -29,14 +27,11 @@ const Archive = () => {
   `)
 
   return (
-    <Layout>
-      <Header />
+    <>
+      <h4>Most Recent Posts:</h4>
       <div>
-        <Link to="/">
-          <h4 class="link home-link">&lt;&lt;&lt; Back Home</h4>
-        </Link>
         {data.allMdx.nodes.map(({ excerpt, frontmatter, fields }) => (
-          <div class="block">
+          <div class="block  side-bar">
             <Link to={fields.slug}>
               <h3 class="line-thin">{frontmatter.title}</h3>
               <p class="date futura">{frontmatter.date}</p>
@@ -45,8 +40,11 @@ const Archive = () => {
           </div>
         ))}
       </div>
-    </Layout>
+      <Link to="/blog/archive">
+        <h4 class="link">See All Posts</h4>
+      </Link>
+    </>
   )
 }
 
-export default Archive
+export default SideBar

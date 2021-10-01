@@ -1,9 +1,8 @@
 import * as React from "react"
 import { graphql } from "gatsby"
 
-import Layout from "../components/layout"
-import Header from "../components/header"
-import SideBar from "../components/side-bar"
+import Layout from "../../components/blog/layout"
+import SideBar from "../../components/blog/side-bar"
 import About from "./about"
 
 export const query = graphql`
@@ -38,12 +37,11 @@ export const query = graphql`
 const HomePage = () => {
   return (
     <Layout>
-      <Header />
       <div class="flex-container">
-        <SideBar />
-        <div class="flex-item">
-          <About />
+        <div>
+          <SideBar />
         </div>
+        <About />
       </div>
     </Layout>
   )
