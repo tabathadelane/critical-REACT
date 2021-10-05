@@ -2,7 +2,7 @@ import { graphql, Link } from "gatsby"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 import React from "react"
 
-import Layout from "../blog/layout"
+import Layout from "./layout"
 import SideBar from "./side-bar"
 
 export const query = graphql`

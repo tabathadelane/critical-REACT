@@ -6,9 +6,12 @@
 
 module.exports = {
   siteMetadata: {
-    title: `Althea's Cronicle of Sending`,
-    description: `This is where I share my adventures with the world while learning Gatsby.js!`,
+    title: `Critical Reactions`,
+    description: `Providing Minor Solutions to Major Problems!`,
+    blogTitle: `Althea's Cronicle of Sending`,
+    blogDescription: `This is where I share my adventures with the world while learning Gatsby.js!`,
   },
+
   plugins: [
     {
       resolve: `gatsby-plugin-mdx`,

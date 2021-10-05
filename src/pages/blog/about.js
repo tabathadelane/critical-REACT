@@ -2,11 +2,11 @@ import React from "react"
 import { useSiteMetadata } from "../../hooks/use-site-metadata"
 
 const About = () => {
-  const { title, description } = useSiteMetadata()
+  const { blogTitle, blogDescription } = useSiteMetadata()
   return (
     <div>
-      <h1>Welcome to {title}</h1>
-      <p>About: {description}</p>
+      <h1>Welcome to {blogTitle}</h1>
+      <p>About: {blogDescription}</p>
     </div>
   )
 }
