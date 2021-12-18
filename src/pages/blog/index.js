@@ -4,7 +4,7 @@ import Layout from "../../components/blog/layout"
 import SideBar from "../../components/blog/side-bar"
 import About from "./about"
 
-const HomePage = () => {
+const BlogHomePage = () => {
   return (
     <Layout>
       <div class="flex-container">
@@ -17,4 +17,4 @@ const HomePage = () => {
   )
 }
 
-export default HomePage
+export default BlogHomePage

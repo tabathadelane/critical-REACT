@@ -14,8 +14,10 @@ export const useRecentPosts = () => {
           frontmatter {
             title
             month
-            day
-            date(formatString: "dddd MMMM Do, YYYY")
+            familiarDate: date(formatString: "dddd MMMM Do, YYYY")
+            dayOfWeek: date(formatString: "dddd")
+            year: date(formatString: "YYYY")
+            day: date(formatString: "Do")
           }
           fields {
             slug

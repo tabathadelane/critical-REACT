@@ -16,8 +16,10 @@ const Archive = () => {
           frontmatter {
             title
             month
-            day
-            date(formatString: "dddd MMMM Do, YYYY")
+            familiarDate: date(formatString: "dddd MMMM Do, YYYY")
+            dayOfWeek: date(formatString: "dddd")
+            year: date(formatString: "YYYY")
+            day: date(formatString: "Do")
           }
           fields {
             slug
@@ -29,20 +31,25 @@ const Archive = () => {
 
   return (
     <Layout>
-      <div>
+      <main>
         <Link to="/blog">
-          <h4 class="link home-link">&lt;&lt;&lt; Back Home</h4>
+          <h4 class="link home-link">&lt;&lt;&lt; Back to the Blog</h4>
         </Link>
         {data.allMdx.nodes.map(({ excerpt, frontmatter, fields }) => (
-          <div class="block">
+          <section class="block">
             <Link to={fields.slug}>
               <h3 class="line-thin">{frontmatter.title}</h3>
-              <p class="date futura">{frontmatter.date}</p>
+              <p class="date futura">
+                <a title={frontmatter.familiarDate}>
+                  {frontmatter.dayOfWeek} {frontmatter.month} {frontmatter.day},{" "}
+                  {frontmatter.year}
+                </a>
+              </p>
               <p class="line">{excerpt}</p>
             </Link>
-          </div>
+          </section>
         ))}
-      </div>
+      </main>
     </Layout>
   )
 }

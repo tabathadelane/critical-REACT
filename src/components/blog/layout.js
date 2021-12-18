@@ -1,4 +1,5 @@
 import React from "react"
+import { Link } from "gatsby"
 import { Global, css } from "@emotion/react"
 import styled from "@emotion/styled"
 import Header from "./header.js"
@@ -24,7 +25,7 @@ export default function Layout({ children }) {
           @font-face {
             font-family: "Friz";
             src: local("FrizQuadrata-Regular"),
-              url("....//fonts/FrizQuadrata-Regular.ttf") format("truetype");
+              url("../fonts/FrizQuadrata-Regular.ttf") format("truetype");
           }
           @font-face {
             font-family: "Masq";
@@ -36,8 +37,8 @@ export default function Layout({ children }) {
             margin: auto;
             max-width: 1100px;
             background-color: #fefeff;
-            border: 1px solid;
-            padding: 0px 50px 20px;
+            ${"" /* border: 1px solid; */}
+            padding: 0px 50px;
           }
           .center {
           }
@@ -68,6 +69,29 @@ export default function Layout({ children }) {
           a {
             text-decoration: none;
             color: black;
+          }
+
+          img {
+            padding: 5px 5px 2px 5px;
+            width: 300px;
+            filter: hue-rotate(120deg) contrast(0.8) saturate(0) grayscale(1)
+              brightness(1);
+          }
+
+          .photo-frame {
+            border: 1px solid black;
+            margin: 10px;
+            & div {
+              text-align: center;
+              text-justify: center;
+              border: 6px solid #1155e2;
+              margin: 7px;
+            }
+          }
+
+          .pre {
+            font-family: "Korinan", serif;
+            white-space: pre;
           }
           .flex-container {
             display: flex;
@@ -134,9 +158,26 @@ export default function Layout({ children }) {
             border-top: 6px solid #1155e2;
             padding-top: 10px;
           }
+          footer {
+            display: flex;
+            justify-content: space-between;
+            text-align: center;
+            border-top: solid #ddd 1px;
+            margin: 50px 10px 0;
+            padding-top: 10px;
+          }
+          footer a {
+            padding: 0px 20px;
+            color: #1155e2;
+          }
         `}
       />
       {children}
+      <footer>
+        <Link to="/">&#8592; Back to Critical Reactions</Link>
+        &copy; Althea Moonbrooke. All rights reserved.
+        <Link to="/blog/archive">Archives</Link>
+      </footer>
     </Wrapper>
   )
 }
