@@ -6,9 +6,12 @@
 
 module.exports = {
   siteMetadata: {
-    title: `Althea's Cronicle of Sending`,
-    description: `This is where I share my adventures with the world while learning Gatsby.js!`,
+    title: `Critical Reactions`,
+    description: `Providing Minor Solutions to Major Problems!`,
+    blogTitle: `Althea's Journal of Sending`,
+    blogDescription: `A collection of far away adventures that keep me close to home.`,
   },
+
   plugins: [
     {
       resolve: `gatsby-plugin-mdx`,
@@ -16,11 +19,18 @@ module.exports = {
         extensions: [`.mdx`, `.md`],
       },
     },
+    // {
+    // resolve: `gatsby-source-filesystem`,
+    // options: {
+    //   name: `tabs`,
+    //   path: `${__dirname}/src/tabs`,
+    // },
+    // },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `posts`,
-        path: `${__dirname}/src/posts`,
+        path: `${__dirname}/src/blog/posts`,
       },
     },
     `gatsby-plugin-emotion`,

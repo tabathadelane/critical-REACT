@@ -5,11 +5,12 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
 
   if (node.internal.type === `Mdx`) {
     const value = createFilePath({ node, getNode })
+    console.log(value)
 
     createNodeField({
       name: `slug`,
       node,
-      value: `/posts${value}`,
+      value: `/blog/posts${value}`,
     })
   }
 }
@@ -28,6 +29,11 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
             fields {
               slug
             }
+            parent {
+              ... on File {
+                sourceInstanceName
+              }
+            }
           }
         }
       }
@@ -44,8 +50,30 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   posts.forEach(({ node }, index) => {
     createPage({
       path: node.fields.slug,
-      component: path.resolve(`./src/components/post-page-template.js`),
+      component: path.resolve(`./src/components/blog/blog-template.js`),
       context: { id: node.id },
     })
   })
 }
+
+// exports.onCreateNode = ({ node, getNode, actions }) => {
+//   const { createNodeField } = actions
+//   // Ensures we are processing only markdown files
+//   if (node.internal.type === "Mdx") {
+//     // Use `createFilePath` to turn markdown files in our `data/faqs` directory into `/faqs/slug`
+//     const relativeFilePath = createFilePath({
+//       node,
+//       getNode,
+//       basePath: "tabs",
+//     })
+
+//     // Creates new query'able field with name of 'slug'
+//     createNodeField({
+//       node,
+//       name: "slug",
+//       value: `/blog/posts${relativeFilePath}`,
+//     })
+//   }
+// }
+
+// I probably need to put this code back and read about it more here: https://www.gatsbyjs.com/docs/reference/config-files/gatsby-node/#createPages

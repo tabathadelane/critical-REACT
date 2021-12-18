@@ -1,8 +1,6 @@
 import * as React from "react"
 import { graphql, Link, useStaticQuery } from "gatsby"
 
-import Layout from "./layout"
-
 const SideBar = () => {
   const data = useStaticQuery(graphql`
     query {
@@ -17,8 +15,10 @@ const SideBar = () => {
           frontmatter {
             title
             month
-            day
-            date(formatString: "dddd MMMM Do, YYYY")
+            familiarDate: date(formatString: "dddd MMMM Do, YYYY")
+            dayOfWeek: date(formatString: "dddd")
+            year: date(formatString: "YYYY")
+            day: date(formatString: "Do")
           }
           fields {
             slug
@@ -29,23 +29,28 @@ const SideBar = () => {
   `)
 
   return (
-    <Layout>
+    <aside>
       <h4>Most Recent Posts:</h4>
       <div>
         {data.allMdx.nodes.map(({ excerpt, frontmatter, fields }) => (
-          <div class="block side-bar">
+          <section class="block  side-bar">
             <Link to={fields.slug}>
               <h3 class="line-thin">{frontmatter.title}</h3>
-              <p class="date futura">{frontmatter.date}</p>
+              <p class="date futura">
+                <a title={frontmatter.familiarDate}>
+                  {frontmatter.dayOfWeek} {frontmatter.month} {frontmatter.day},{" "}
+                  {frontmatter.year}
+                </a>
+              </p>
               <p class="line">{excerpt}</p>
             </Link>
-          </div>
+          </section>
         ))}
       </div>
-      <Link to="/archive">
+      <Link to="/blog/archive">
         <h4 class="link">See All Posts</h4>
       </Link>
-    </Layout>
+    </aside>
   )
 }
 

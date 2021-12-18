@@ -2,8 +2,7 @@ import { graphql, Link } from "gatsby"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 import React from "react"
 
-import Layout from "../components/layout"
-import Header from "./header"
+import Layout from "./layout"
 import SideBar from "./side-bar"
 
 export const query = graphql`
@@ -13,27 +12,39 @@ export const query = graphql`
       frontmatter {
         title
         date(formatString: "YYYY MMMM Do")
+        month
+        familiarDate: date(formatString: "dddd MMMM Do, YYYY")
+        dayOfWeek: date(formatString: "dddd")
+        year: date(formatString: "YYYY")
+        day: date(formatString: "Do")
       }
     }
   }
 `
 
-export default ({ data }) => {
+const BlogPost = ({ data }) => {
   const { frontmatter, body } = data.mdx
   return (
     <Layout>
-      <Header />
       <div class="flex-container">
-        <SideBar />
-        <div class="flex-item">
-          <Link to="/">
+        <div>
+          <SideBar />
+        </div>
+        <div>
+          <Link to="/blog">
             <h4 class="link home-link">&lt;&lt;&lt; Back Home</h4>
           </Link>
           <h2>{frontmatter.title}</h2>
-          <p>{frontmatter.date}</p>
+          <p>
+            <a class="pre" title={frontmatter.familiarDate}>
+              Date: {frontmatter.month} {frontmatter.day}
+            </a>
+          </p>
           <MDXRenderer>{body}</MDXRenderer>
         </div>
       </div>
     </Layout>
   )
 }
+
+export default BlogPost
