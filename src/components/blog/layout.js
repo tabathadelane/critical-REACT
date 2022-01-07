@@ -66,6 +66,9 @@ export default function Layout({ children }) {
             color: #1155e2;
             font-size: 24px;
           }
+          .accolade {
+            padding-top: 10px;
+          }
           a {
             text-decoration: none;
             color: black;
