@@ -6,9 +6,14 @@ const About = () => {
   return (
     <main>
       <h2>Welcome to my blog!</h2>
-      <div class="photo-frame">
-        <div>
-          <img src={`/images/althea-headshot.jpg`} alt="Althea Moonbrooke" />
+      <h4 class="accolade">
+        <em>A Waterdeep Exuberant Quill Guild Award Winning Blog 2018-2021!</em>
+      </h4>
+      <div class="photo-container">
+        <div class="photo-frame">
+          <div>
+            <img src={`/images/althea-headshot.jpg`} alt="Althea Moonbrooke" />
+          </div>
         </div>
       </div>
     </main>
