@@ -77,7 +77,9 @@ export default function Layout({ children }) {
             filter: hue-rotate(120deg) contrast(0.8) saturate(0) grayscale(1)
               brightness(1);
           }
-
+          .photo-container {
+            width: 360px;
+          }
           .photo-frame {
             border: 1px solid black;
             margin: 10px;
@@ -166,7 +168,8 @@ export default function Layout({ children }) {
             margin: 50px 10px 0;
             padding-top: 10px;
           }
-          footer a {
+          footer a,
+          footer p {
             padding: 0px 20px;
             color: #1155e2;
           }
@@ -175,7 +178,7 @@ export default function Layout({ children }) {
       {children}
       <footer>
         <Link to="/">&#8592; Back to Critical Reactions</Link>
-        &copy; Althea Moonbrooke. All rights reserved.
+        <div>&copy; Althea Moonbrooke. All rights reserved.</div>
         <Link to="/blog/archive">Archives</Link>
       </footer>
     </Wrapper>
