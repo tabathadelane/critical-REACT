@@ -66,9 +66,6 @@ export default function Layout({ children }) {
             color: #1155e2;
             font-size: 24px;
           }
-          .accolade {
-            padding-top: 10px;
-          }
           a {
             text-decoration: none;
             color: black;
@@ -77,8 +74,29 @@ export default function Layout({ children }) {
           img {
             padding: 5px 5px 2px 5px;
             width: 300px;
-            filter: hue-rotate(120deg) contrast(0.8) saturate(0) grayscale(1)
+            filter: hue-rotate(0deg) contrast(0.8) saturate(100%) grayscale(0.6)
               brightness(1);
+          }
+          .accolade {
+            padding: 20px 0 0 15px;
+          }
+          .about-title {
+            padding-left: 25px;
+            letter-spacing: 2px;
+            font-size: 48px;
+          }
+
+          .about-flex {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            padding-top: 20px;
+            & p {
+              padding: 10px 5px 0px 20px;
+              line-height: 1.6;
+              width: 375px;
+            }
           }
           .photo-container {
             width: 360px;
