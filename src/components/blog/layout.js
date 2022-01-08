@@ -35,6 +35,7 @@ export default function Layout({ children }) {
           body {
             font-family: "Korinan", serif;
             margin: auto;
+            min-width: 800px;
             max-width: 1100px;
             background-color: #fefeff;
             ${"" /* border: 1px solid; */}
@@ -81,24 +82,26 @@ export default function Layout({ children }) {
             padding: 20px 0 0 15px;
           }
           .about-title {
-            padding-left: 25px;
+            text-align: center;
             letter-spacing: 2px;
             font-size: 48px;
           }
 
           .about-flex {
+            padding-top: 20px;
             display: flex;
             flex-wrap: wrap;
             align-items: center;
-            justify-content: space-between;
-            padding-top: 20px;
+            justify-content: center;
             & p {
-              padding: 10px 5px 0px 20px;
-              line-height: 1.6;
+              margin: 0 auto;
+              padding: 0px 5px 0px 20px;
+              line-height: 1.4;
               width: 375px;
             }
           }
           .photo-container {
+            align-self: start;
             width: 360px;
           }
           .photo-frame {

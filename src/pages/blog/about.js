@@ -19,19 +19,19 @@ const About = () => {
         </div>
         <span>
           <p>
-            My name is Althea Moonbrooke. I have spent the last few years
-            travelling all over the continent with our adventuring party,
-            Critical Reactions. I have come face to face with dragons - blasting
-            one from the top of a castle with a crack of my thunderwave, and
-            making friends with another who gifted me the Ollahm Harp. I have
-            piloted the Apparatus of Kwalish from the depths of a sunken city
-            through a lake of ooze. And I have crawled my way back from the 3rd
-            level of Hell after an attempt was made on our lives to sacrifice us
-            to a dark god. -- With our aquired riches, we have constructed a
-            beautiful manor where I host parties for all of the most import
-            personalities in Waterdeep when we are between quests. While we are
-            on the road, I will keep you updated on all of our exciting
-            happenings here through the new magic of the World Wide Weave.
+            My name is Althea Moonbrooke. My cloak never dirties, my hat always
+            dazzles, and my harp shows no mercy. I have come face to face with
+            dragons - blasting one from the top of a castle with a crack of my
+            thunderwave, and making friends with another who gifted me the
+            Ollahm Harp. I have piloted the Apparatus of Kwalish from the depths
+            of a sunken city through a lake of ooze. And I have crawled my way
+            back from the 3rd level of Hell after an attempt was made on our
+            lives to sacrifice us to a dark god. -- With our aquired riches, we
+            have constructed a beautiful manor where I host parties for all of
+            the most import personalities in Waterdeep when we are between
+            quests. While we are on the road, I will keep you updated on all of
+            our exciting happenings here through the new magic of the World Wide
+            Weave.
           </p>
         </span>
       </div>
@@ -41,7 +41,10 @@ const About = () => {
         </em>
       </h4>
       <h4 class="accolade futura">
-        <em>Fearun Feathered Pen Society Member since 2020.</em>
+        <em>Fearun Feathered Pen Society Member since 2019.</em>
+      </h4>
+      <h4 class="accolade futura">
+        <em>"Honorary Impressive Headpeices" Recepient 2021 </em>
       </h4>
     </main>
   )
