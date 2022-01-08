@@ -35,6 +35,7 @@ export default function Layout({ children }) {
           body {
             font-family: "Korinan", serif;
             margin: auto;
+            min-width: 800px;
             max-width: 1100px;
             background-color: #fefeff;
             ${"" /* border: 1px solid; */}
@@ -74,10 +75,35 @@ export default function Layout({ children }) {
           img {
             padding: 5px 5px 2px 5px;
             width: 300px;
-            filter: hue-rotate(120deg) contrast(0.8) saturate(0) grayscale(1)
+            filter: hue-rotate(0deg) contrast(0.8) saturate(100%) grayscale(0.6)
               brightness(1);
           }
+          .accolade {
+            padding: 20px 0 0 15px;
+          }
+          .about-title {
+            text-align: center;
+            letter-spacing: 2px;
+            font-size: 48px;
+          }
 
+          .about-flex {
+            padding-top: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            & p {
+              margin: 0 auto;
+              padding: 0px 5px 0px 20px;
+              line-height: 1.4;
+              width: 375px;
+            }
+          }
+          .photo-container {
+            align-self: start;
+            width: 360px;
+          }
           .photo-frame {
             border: 1px solid black;
             margin: 10px;
@@ -166,7 +192,8 @@ export default function Layout({ children }) {
             margin: 50px 10px 0;
             padding-top: 10px;
           }
-          footer a {
+          footer a,
+          footer p {
             padding: 0px 20px;
             color: #1155e2;
           }
@@ -175,7 +202,7 @@ export default function Layout({ children }) {
       {children}
       <footer>
         <Link to="/">&#8592; Back to Critical Reactions</Link>
-        &copy; Althea Moonbrooke. All rights reserved.
+        <div>&copy; Althea Moonbrooke. All rights reserved.</div>
         <Link to="/blog/archive">Archives</Link>
       </footer>
     </Wrapper>

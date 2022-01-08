@@ -30,7 +30,7 @@ const SideBar = () => {
 
   return (
     <aside>
-      <h4>Most Recent Posts:</h4>
+      <h4>Most recent entries::</h4>
       <div>
         {data.allMdx.nodes.map(({ excerpt, frontmatter, fields }) => (
           <section class="block  side-bar">
@@ -48,7 +48,7 @@ const SideBar = () => {
         ))}
       </div>
       <Link to="/blog/archive">
-        <h4 class="link">See All Posts</h4>
+        <h4 class="link">See all posts</h4>
       </Link>
     </aside>
   )
