@@ -4,8 +4,8 @@ import Layout from "../components/layout"
 
 const Contact = () => {
   return (
-    <Layout>
-      <div>CONTACT</div>
+    <Layout class="margin">
+      <div class="fade">CONTACT</div>
     </Layout>
   )
 }

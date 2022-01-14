@@ -4,8 +4,8 @@ import Layout from "../components/layout"
 
 const Unlucky = () => {
   return (
-    <Layout>
-      <div>I'M FEELING UNLUCKY</div>
+    <Layout class="margin">
+      <div class="fade">I'M FEELING UNLUCKY</div>
     </Layout>
   )
 }

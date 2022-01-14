@@ -4,8 +4,8 @@ import Layout from "../components/layout"
 
 const Testimonials = () => {
   return (
-    <Layout>
-      <div>WHY YOU SHOULD HIRE US</div>
+    <Layout class="margin">
+      <div class="fade">WHY YOU SHOULD HIRE US</div>
     </Layout>
   )
 }
