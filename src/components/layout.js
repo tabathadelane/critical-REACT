@@ -4,12 +4,12 @@ import styled from "@emotion/styled"
 import Header from "./header"
 
 const Wrapper = styled("div")`
-  padding: 10px;
   height: 100vh;
   background-image: url(/images/background-pattern.png);
   background-repeat: repeat;
   background-size: 500px 500px;
   font-family: "Dongle";
+  color: #563752;
 `
 export default function Layout({ children }) {
   return (
@@ -22,43 +22,55 @@ export default function Layout({ children }) {
             src: local("korinan"),
               url("../fonts/korinan.ttf") format("truetype");
           }
-
+          html {
+          }
           body {
+            margin: 0;
+            padding: 0;
             height: 100vh;
           }
           .fade {
-            margin: 50px auto 0;
-            max-width: 1200px;
+            margin: 0px auto 0;
             text-align: center;
-            background-color: rgba(255, 255, 240, 0.8);
+            background-color: rgba(207, 194, 155, 0.9);
           }
           header {
-            margin: 100px 100px 0 100px;
+            height: 60px;
+            padding: 20px 0;
           }
           .cr {
+            font-size: 42px;
             font-family: "Source Serif Pro";
+            padding-left: 15px;
           }
-          p {
+          .title {
+            display: flex;
+            align-items: baseline;
+            justify-content: space-between;
+            ${"" /* border-bottom: rgb(76, 69, 58) solid 5px; */}
+            background: rgba(226, 218, 195, 0.9);
+          }
+          p,
+          h1 {
             margin: 0;
           }
           .content {
-            min-height: 500px;
+            height: calc(100vh - 100px);
             padding: 25px 0;
-            margin: 0px auto 50px;
+            margin: 0px auto 00px;
           }
           .margin {
-            margin: 0px 100px 100px 100px;
           }
           nav {
-            padding: 25px 0;
+            font-size: 32px;
+            line-height: 1;
             display: flex;
-            justify-content: center;
-            margin: 0 10px;
+            justify-content: space-around;
             & a {
-              padding: 10px;
+              text-decoration: none;
+              padding: 0 15px;
               border-radius: 3px;
-              color: rgb(76, 69, 58);
-            }
+              color: #563752;
           }
         `}
       />
