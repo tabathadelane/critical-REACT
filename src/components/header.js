@@ -5,7 +5,7 @@ import { useSiteMetadata } from "../hooks/use-site-metadata"
 const Header = () => {
   const { title, description } = useSiteMetadata()
   return (
-    <header class="fade title">
+    <header class="title">
       <div class="">
         <h1 class="cr">{title}</h1>
         {/* <p class="">{description}</p> */}

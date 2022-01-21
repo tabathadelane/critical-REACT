@@ -6,7 +6,7 @@ import Layout from "../components/layout"
 const HomePage = () => {
   return (
     <Layout class="margin">
-      <div class="fade content">HOME PAGE</div>
+      <div class="content">HOME PAGE</div>
     </Layout>
   )
 }

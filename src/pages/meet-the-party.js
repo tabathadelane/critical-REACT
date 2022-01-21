@@ -5,7 +5,7 @@ import Layout from "../components/layout"
 const TheParty = () => {
   return (
     <Layout class="margin">
-      <div class="fade content">
+      <div class="content">
         <p>MEET THE PARTY</p>
         <p>
           Formally known as the Minor Solutions, We self adopted this new name
