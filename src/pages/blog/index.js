@@ -6,7 +6,7 @@ import About from "./about"
 
 const BlogHomePage = () => {
   return (
-    <Layout class="margin">
+    <Layout>
       <div class="flex-container">
         <div>
           <SideBar />

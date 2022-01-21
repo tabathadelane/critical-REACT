@@ -3,7 +3,7 @@ import { Global, css } from "@emotion/react"
 import styled from "@emotion/styled"
 import Header from "./header"
 
-const Background = styled("div")`
+const BackgroundStyle = styled("div")`
   height: 100vh;
   background-image: url(/images/background-pattern.png);
   background-repeat: repeat;
@@ -11,16 +11,21 @@ const Background = styled("div")`
   font-family: "Dongle";
   color: #563752;
 `
-const Fade = styled("div")`
+const FadedStyle = styled("div")`
   background-color: rgba(207, 194, 155, 0.9);
   margin: 0px auto 0;
   text-align: center;
 `
+const ContentStyle = styled("div")`
+  height: calc(100vh - 130px);
+  padding: 25px 0;
+  margin: 0px auto 00px;
+`
 
 export default function Layout({ children }) {
   return (
-    <Background>
-      <Fade>
+    <BackgroundStyle>
+      <FadedStyle>
         <Header />
         <Global
           styles={css`
@@ -29,7 +34,9 @@ export default function Layout({ children }) {
             src: local("korinan"),
               url("../fonts/korinan.ttf") format("truetype");
           }
-          html {
+          :root {
+            --dark-purple: #563752;
+            --tan-transparent: rgba(226, 218, 195, 0.3);
           }
           body {
             margin: 0;
@@ -50,20 +57,12 @@ export default function Layout({ children }) {
             display: flex;
             align-items: end;
             justify-content: space-between;
-            ${"" /* border-bottom: rgb(76, 69, 58) solid 5px; */}
-            background: rgba(226, 218, 195, 0.3);
-            border-bottom: #563752 solid 5px;
+            background: var(--tan-transparent);
+            border-bottom: solid 5px var(--dark-purple);
           }
           p,
           h1 {
             margin: 0;
-          }
-          .content {
-            height: calc(100vh - 100px);
-            padding: 25px 0;
-            margin: 0px auto 00px;
-          }
-          .margin {
           }
           nav {
             font-size: 32px;
@@ -74,13 +73,12 @@ export default function Layout({ children }) {
               text-decoration: none;
               padding: 0 15px;
               border-radius: 3px;
-              color: #563752;
+              color: var(--dark-purple);
           }
         `}
         />
-
-        {children}
-      </Fade>
-    </Background>
+        <ContentStyle>{children}</ContentStyle>
+      </FadedStyle>
+    </BackgroundStyle>
   )
 }

@@ -25,7 +25,7 @@ export const query = graphql`
 const BlogPost = ({ data }) => {
   const { frontmatter, body } = data.mdx
   return (
-    <Layout class="margin">
+    <Layout>
       <div class="flex-container">
         <div>
           <SideBar />

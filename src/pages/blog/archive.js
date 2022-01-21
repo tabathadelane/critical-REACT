@@ -30,7 +30,7 @@ const Archive = () => {
   `)
 
   return (
-    <Layout class="margin">
+    <Layout>
       <main>
         <Link to="/blog">
           <h4 class="link home-link">&lt;&lt;&lt; Back to the Blog</h4>
