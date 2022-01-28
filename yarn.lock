@@ -1244,6 +1244,16 @@
   resolved "https://registry.yarnpkg.com/@fontsource/dongle/-/dongle-4.5.1.tgz#7d4c7e75a37a601fe99f54afc702edd7946f74d4"
   integrity sha512-OhRupEUS9bSCZKadawWAFbU/HIfzSn66DgP9I0miDd8l2kOYvSVIJITtK6oUhTMcRBH0qVu+UjYTQ5hSFm2lIw==
 
+"@fontsource/gideon-roman@^4.5.2":
+  version "4.5.2"
+  resolved "https://registry.yarnpkg.com/@fontsource/gideon-roman/-/gideon-roman-4.5.2.tgz#059fb06cd90dfd33bde91e890c599ec6ae21cad9"
+  integrity sha512-/180cke3JjJGYRtXa6GjGIOsjqotHqPsVZPgtaBhcm8aEv3q6Ve2vjfAd47fsFK9P/2RhRozFy5eD5xkl86HLA==
+
+"@fontsource/lato@^4.5.1":
+  version "4.5.1"
+  resolved "https://registry.yarnpkg.com/@fontsource/lato/-/lato-4.5.1.tgz#606f0908607f96bd2e442bce6c9e6403c5e25ec2"
+  integrity sha512-46uDN51qCaNccDnpIZX8vzPF5Vzvfz2BYi9SrlATqp2x//oHvpBhszD4ApNo+1jiUpFeDiyG1ITS0rN4T571Lg==
+
 "@fontsource/source-serif-pro@^4.5.0":
   version "4.5.0"
   resolved "https://registry.yarnpkg.com/@fontsource/source-serif-pro/-/source-serif-pro-4.5.0.tgz#5c348a1d6e7b4f4db23764842e89ccac48cfc3f6"

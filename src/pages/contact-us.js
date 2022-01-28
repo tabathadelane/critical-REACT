@@ -4,15 +4,18 @@ import Layout from "../components/layout"
 import styled from "@emotion/styled"
 
 const ContactStyle = styled("div")`
-  font-size: 40px;
   width: 500px;
   margin: auto;
-
+  text-align: left;
   input,
   select,
   textarea {
+    margin: auto;
+    font-size: 18px;
+    font-family: "Gideon Roman";
     width: 100%;
     display: inline-block;
+    padding: 5px;
   }
 `
 

@@ -8,10 +8,18 @@ const BackgroundStyle = styled("div")`
   background-image: url(/images/background-pattern.png);
   background-repeat: repeat;
   background-size: 500px 500px;
-  font-family: "Dongle";
+  font-family: "Lato";
   color: #563752;
+  h3 {
+    font-size: 30px;
+  }
+  p,
+  div {
+    font-size: 24px;
+  }
 `
 const FadedStyle = styled("div")`
+  height: 100%;
   background-color: rgba(207, 194, 155, 0.9);
   margin: 0px auto 0;
   text-align: center;
@@ -29,14 +37,9 @@ export default function Layout({ children }) {
         <Header />
         <Global
           styles={css`
-          @font-face {
-            font-family: "Korinan";
-            src: local("korinan"),
-              url("../fonts/korinan.ttf") format("truetype");
-          }
           :root {
             --dark-purple: #563752;
-            --tan-transparent: rgba(226, 218, 195, 0.3);
+            --tan-transparent: rgba(226, 218, 195, 0.7);
           }
           body {
             margin: 0;
@@ -45,17 +48,18 @@ export default function Layout({ children }) {
             
           }
           header {
-            height: 60px;
-            padding: 10px 0;
-          }
+            height: 40px;
+            padding: 20px 0 10px 0;          
+            }
           .cr {
             font-size: 42px;
-            font-family: "Source Serif Pro";
+            font-family: "Gideon Roman";
+            text-shadow:.5px 0 0;
             padding-left: 15px;
           }
           .title {
             display: flex;
-            align-items: end;
+            align-items: baseline;;
             justify-content: space-between;
             background: var(--tan-transparent);
             border-bottom: solid 5px var(--dark-purple);
@@ -65,7 +69,8 @@ export default function Layout({ children }) {
             margin: 0;
           }
           nav {
-            font-size: 32px;
+            font-size: 24px;
+            font-family: "Gideon Roman";            
             line-height: 1;
             display: flex;
             justify-content: space-around;
