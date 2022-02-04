@@ -3,17 +3,17 @@ import React from "react"
 import Layout from "../components/layout"
 import styled from "@emotion/styled"
 
-const PartyStyle = styled("div")`
+const PartyStyles = styled("div")`
   font-size: 40px;
 `
 
 const TheParty = () => {
   return (
     <Layout>
-      <PartyStyle class="">
+      <PartyStyles class="">
         <p>MEET THE PARTY</p>
         <p>add mini character profiles to this page. perhaps little cards?</p>
-      </PartyStyle>
+      </PartyStyles>
     </Layout>
   )
 }

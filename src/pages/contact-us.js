@@ -3,7 +3,7 @@ import React from "react"
 import Layout from "../components/layout"
 import styled from "@emotion/styled"
 
-const ContactStyle = styled("div")`
+const ContactStyles = styled("div")`
   width: 500px;
   margin: auto;
   text-align: left;
@@ -22,7 +22,7 @@ const ContactStyle = styled("div")`
 const Contact = () => {
   return (
     <Layout>
-      <ContactStyle>
+      <ContactStyles>
         This will be a form!
         <form action="">
           <label for="name">Who is our point of contact?</label>
@@ -52,7 +52,7 @@ const Contact = () => {
 
           <input type="submit" value="Submit" />
         </form>
-      </ContactStyle>
+      </ContactStyles>
     </Layout>
   )
 }

@@ -1254,6 +1254,11 @@
   resolved "https://registry.yarnpkg.com/@fontsource/lato/-/lato-4.5.1.tgz#606f0908607f96bd2e442bce6c9e6403c5e25ec2"
   integrity sha512-46uDN51qCaNccDnpIZX8vzPF5Vzvfz2BYi9SrlATqp2x//oHvpBhszD4ApNo+1jiUpFeDiyG1ITS0rN4T571Lg==
 
+"@fontsource/montserrat@^4.5.3":
+  version "4.5.3"
+  resolved "https://registry.yarnpkg.com/@fontsource/montserrat/-/montserrat-4.5.3.tgz#30e8943df4f9904b7379a27304073837193b53b3"
+  integrity sha512-VT+wPK/PHWwqm7r6UbTjI+oj31obzj9+V9HSUl8tcuKtv4deYuH+OAbMf5RG62uVDT8wiZ8QyCbr5gmfHQ3ykg==
+
 "@fontsource/source-serif-pro@^4.5.0":
   version "4.5.0"
   resolved "https://registry.yarnpkg.com/@fontsource/source-serif-pro/-/source-serif-pro-4.5.0.tgz#5c348a1d6e7b4f4db23764842e89ccac48cfc3f6"
