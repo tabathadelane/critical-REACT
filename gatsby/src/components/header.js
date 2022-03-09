@@ -20,6 +20,7 @@ const HeaderStyles = styled("header")`
 `
 const TitleStyles = styled("h1")`
   font-size: 32px;
+  display: flex;
   font-family: "Gideon Roman";
   text-shadow: 0.5px 0 0;
   padding-left: 15px;
@@ -63,7 +64,18 @@ const Header = () => {
   return (
     <HeaderStyles>
       <div>
-        <TitleStyles>{title}</TitleStyles>
+        <TitleStyles>
+          <p 
+            css={css`
+            font-size: 12px;
+            > a {
+              text-decoration: none; 
+              color: var(--tan-transparent); 
+              }
+            `}>
+            <Link to="/submissions">*</Link>
+          </p>{title}
+        </TitleStyles>
         {/* <p class="">{description}</p> */}
       </div>
       <NavStyles
