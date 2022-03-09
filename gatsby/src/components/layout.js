@@ -4,9 +4,9 @@ import styled from "@emotion/styled"
 import Header from "./header"
 
 const PageBackgroundStyles = styled("div")`
-  height: 100vh;
   background-attachment: fixed;
-  background-image: url(/images/background-pattern.png);
+  background: url(/images/background-pattern.png);
+  background-size: cover;
   filter: saturate(0.8);
   background-repeat: repeat;
   background-size: 500px 500px;
@@ -15,13 +15,13 @@ const PageBackgroundStyles = styled("div")`
 `
 const BackgroundFadeStyles = styled("div")`
   filter: saturate(100%);
-  height: 100%;
   background-color: rgba(207, 194, 155, 0.9);
   ${"" /* background-color: rgba(227, 214, 175, 0.9); */}
   margin: 0px auto 0;
   text-align: center;
 `
 const ContentStyles = styled("div")`
+height: 100%;
   max-width: 1050px;
   padding: 25px 0;
   margin: 0px auto 00px;
@@ -40,14 +40,13 @@ export default function Layout({ children }) {
               --tan-transparent: rgba(226, 218, 195, 0.7);
             }
             html {
-              min-height: 100%;
+              height: 100vh;
               margin: 0;
             }
             body {
-              min-height: 100%;
+              min-height: 100vh;
               margin: 0;
               padding: 0;
-              width: 100%;
             }
           `}
         />

@@ -13,6 +13,8 @@ const HeaderStyles = styled("header")`
   background: var(--tan-transparent);
   margin: 0;
   padding: 0;
+  box-shadow: 2px 4px 8px 3px rgba(50, 25, 0, 0.4);
+
   ${"" /* border-bottom: solid 10px burlywood; */}
   ${"" /* border-bottom: solid 5px var(--dark-purple); */}
 `

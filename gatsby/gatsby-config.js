@@ -3,8 +3,12 @@
  *
  * See: https://www.gatsbyjs.com/docs/gatsby-config/
  */
+ import dotenv from 'dotenv';
 
-module.exports = {
+ dotenv.config({ path: '.env' });
+
+export default {
+  
   siteMetadata: {
     title: `Critical Reactions`,
     description: `Providing Minor Solutions to Major Problems!`,
@@ -19,13 +23,6 @@ module.exports = {
         extensions: [`.mdx`, `.md`],
       },
     },
-    // {
-    // resolve: `gatsby-source-filesystem`,
-    // options: {
-    //   name: `tabs`,
-    //   path: `${__dirname}/src/tabs`,
-    // },
-    // },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -34,5 +31,15 @@ module.exports = {
       },
     },
     `gatsby-plugin-emotion`,
+    {
+      resolve: 'gatsby-source-sanity',
+      options: {
+        projectId: 'wquwjb1d',
+        dataset: 'production',
+        watchMode: true,
+        token: process.env.SANITY_TOKEN,
+      }
+
+    },
   ],
-}
+};

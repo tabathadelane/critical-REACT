@@ -29,10 +29,12 @@ const FrameStyles = styled("div")``
 const ImageStyles = styled("div")`
   height: 300px;
   border: 10px ridge burlywood;
+  box-shadow: 3px 5px 8px 3px rgba(50, 25, 0, 0.8);
+
 
   > img {
     height: inherit;
-    filter: sepia(0.7) hue-rotate(-5deg) contrast(0.95);
+    filter: sepia(0.4) hue-rotate(-15deg) contrast(.9);
     ${"" /* border: 10px ridge rgb(245, 239, 223); */}
   }
 `

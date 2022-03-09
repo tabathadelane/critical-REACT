@@ -4,6 +4,8 @@ import Layout from "../components/layout"
 import styled from "@emotion/styled"
 
 const PartyStyles = styled("div")`
+  height: 100vh;
+
   font-size: 40px;
 `
 

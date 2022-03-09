@@ -81,11 +81,15 @@ export default function Layout({ children }) {
           .accolade {
             padding: 20px 0 0 15px;
           }
+          .i-award {
+            fill: grey;
+          }
           .about-title {
             text-align: center;
             letter-spacing: 2px;
             font-size: 48px;
           }
+
 
           .about-flex {
             padding-top: 20px;

@@ -4,6 +4,7 @@ import Layout from "../components/layout"
 import styled from "@emotion/styled"
 
 const ContactStyles = styled("div")`
+  height: 100vh;
   width: 500px;
   margin: auto;
   text-align: left;

@@ -1,6 +1,8 @@
 import React from "react"
 import { useSiteMetadata } from "../../hooks/use-site-metadata"
 
+import { FaAward as Award } from "react-icons/fa";
+
 const About = () => {
   const { blogTitle, blogDescription } = useSiteMetadata()
   return (
@@ -37,14 +39,14 @@ const About = () => {
       </div>
       <h4 class="accolade futura">
         <em>
-          A "Waterdeep Exuberant Quill Guild" Award Winning Blog 2018-2021!
+          <Award class="i-award"/> A "Waterdeep Exuberant Quill Guild" Award Winning Blog 2018-2021!
         </em>
       </h4>
       <h4 class="accolade futura">
-        <em>Fearun Feathered Pen Society Member since 2019.</em>
+        <em><Award class="i-award"/> Fearun Feathered Pen Society Member since 2019.</em>
       </h4>
       <h4 class="accolade futura">
-        <em>"Honorary Impressive Headpeices" Recepient 2021 </em>
+        <em><Award class="i-award"/> "Honorary Impressive Headpeices" Recepient 2021 </em>
       </h4>
     </main>
   )
