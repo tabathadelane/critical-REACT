@@ -1,0 +1,16 @@
+export const REGIONS = [
+    {value: 'waterdeep', title: 'Sword Coast/Waterdeep'},
+    {value: 'chult', title: 'Chultan Peninsula'},
+    {value: 'moonshae', title: 'Moonshae Isles'},
+    {value: 'amn', title: 'Amn/Athkatla'},
+    {value: 'tethyr', title: 'Tethyr/Zazesspur'},
+    {value: 'calimshan', title: 'Calimshan/Calimport'},
+    {value: 'mulhorand', title: 'Mulhorand/Skuld'},
+    {value: 'unther', title: 'Unther/Ulthalass'},
+    {value: 'chessenta', title: 'Chessenta/Cimbar'},
+    {value: 'thay', title: 'Thay/Bezantur'},
+    {value: 'icewindDale', title: 'Icewind Dale'},
+    {value: 'underdark', title: 'Underdark'},
+    {value: 'faerun', title: 'Other Faerun - please describe in detail'},
+    {value: 'anotherPlane', title: 'Another Plane - how will we get there?'},
+]

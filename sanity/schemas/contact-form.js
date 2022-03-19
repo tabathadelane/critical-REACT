@@ -43,7 +43,8 @@ export default {
                     {value: 'faerun', title: 'Other Faerun - please describe in detail'},
                     {value: 'anotherPlane', title: 'Another Plane - how will we get there?'},
                 ]
-            }
+            },
+            validation: Rule => Rule.required()
         },
         {
             name: 'info',
@@ -138,3 +139,19 @@ preview: {
     },
 },
 }
+
+// { 
+//     "mutations": [
+//       { 
+//         "create": { 
+//           "_type": "contact", 
+//           "name": "Dungeon master2" ,
+//           "town": "Home",
+//           "region": "",
+//           "info": "I do what I want",
+//           "emergency": "false",
+//           "date":""
+//         } 
+//       }
+//     ]
+//   }

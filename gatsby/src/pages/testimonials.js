@@ -4,7 +4,7 @@ import Layout from "../components/layout"
 import styled from "@emotion/styled"
 
 const TestimonialsStyles = styled("div")`
-  height: 100vh;
+  min-height:var(--adjust-page-vh);
 
   font-size: 40px;
 `

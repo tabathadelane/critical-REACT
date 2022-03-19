@@ -1,7 +1,7 @@
 {
-  "name": "gatsby-starter-hello-world",
+  "name": "critical-reactions-site",
   "private": true,
-  "description": "A simplified bare-bones starter for Gatsby",
+  "description": "an excuse to build something in React and Gatbsy",
   "version": "0.1.0",
   "license": "0BSD",
   "scripts": {

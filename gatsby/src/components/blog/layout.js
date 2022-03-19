@@ -122,7 +122,14 @@ export default function Layout({ children }) {
           .pre {
             font-family: "Korinan", serif;
             white-space: pre;
+            pointer-events: visible;
+            all: unset;
+            cursor: pointer;  
+            &:hover {
+              background-color: lightgrey;
+            }          
           }
+
           .flex-container {
             display: flex;
           }

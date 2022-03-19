@@ -1,5 +1,5 @@
 import React from "react"
-import { useSiteMetadata } from "../hooks/use-site-metadata"
+import { useSiteMetadata } from "../utils/use-site-metadata"
 
 import Layout from "../components/layout"
 import { css } from "@emotion/react"
@@ -50,6 +50,7 @@ const InfoStyles = styled("p")`
 const HomePage = () => {
   return (
     <Layout>
+    <div css={css`min-height:var(--adjust-page-vh); `}>
       <SloganStyles
         css={css`
           font-size: 40px;
@@ -85,6 +86,7 @@ const HomePage = () => {
         about us or inquire about help. We are very experienced and posssess a
         wide range of talents and knowledge.
       </InfoStyles>
+      </div>
     </Layout>
   )
 }

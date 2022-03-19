@@ -36,9 +36,9 @@ const BlogPost = ({ data }) => {
           </Link>
           <h2>{frontmatter.title}</h2>
           <p>
-            <a class="pre" title={frontmatter.familiarDate}>
+            <button class="pre" title={frontmatter.familiarDate}>
               Date: {frontmatter.month} {frontmatter.day}
-            </a>
+            </button>
           </p>
           <MDXRenderer>{body}</MDXRenderer>
         </div>

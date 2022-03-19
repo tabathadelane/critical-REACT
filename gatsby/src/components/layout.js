@@ -21,10 +21,9 @@ const BackgroundFadeStyles = styled("div")`
   text-align: center;
 `
 const ContentStyles = styled("div")`
-height: 100%;
+  height: 100%;
   max-width: 1050px;
-  padding: 25px 0;
-  margin: 0px auto 00px;
+  margin: 25px auto 00px;
   text-shadow: 0px 0px 3px white;
 `
 
@@ -38,6 +37,8 @@ export default function Layout({ children }) {
             :root {
               --dark-purple: #563752;
               --tan-transparent: rgba(226, 218, 195, 0.7);
+              --header-height: calc(60.5px + 25px); //the margin set on ContentStyles
+              --adjust-page-vh: calc(100vh - var(--header-height))
             }
             html {
               height: 100vh;
