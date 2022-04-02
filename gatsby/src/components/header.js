@@ -94,7 +94,7 @@ const Header = () => {
             <Link to="/testimonials">Testimonials</Link>
           </NavItemStyles>
           <NavItemStyles>
-            <Link to="/contact-us">Contact</Link>
+            <Link to="/contact-us">Call for aid</Link>
           </NavItemStyles>
         </ul>
       </NavStyles>

@@ -36,6 +36,8 @@ export default function Layout({ children }) {
           styles={css`
             :root {
               --dark-purple: #563752;
+              --purple-transparent: rgba(86,55,82, 0.7);
+              --tan: rgb(226, 218, 195);
               --tan-transparent: rgba(226, 218, 195, 0.7);
               --header-height: calc(60.5px + 25px); //the margin set on ContentStyles
               --adjust-page-vh: calc(100vh - var(--header-height))

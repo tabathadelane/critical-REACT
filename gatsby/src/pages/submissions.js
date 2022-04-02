@@ -94,8 +94,9 @@ const Submissions = ({ data: { HelpSubmissions: { nodes: submissions }}}) => {
 
   return (
     <Layout>
+
       <HelpStyles>
-        Help us!!!
+        <h1>Your current help requests:</h1>
 
         {submissions.map((sub) => (
           <SubFormatStyles>
