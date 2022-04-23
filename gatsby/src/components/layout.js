@@ -4,6 +4,7 @@ import styled from "@emotion/styled"
 import Header from "./header"
 
 const PageBackgroundStyles = styled("div")`
+  min-height: 100vh;
   background-attachment: fixed;
   background: url(/images/background-pattern.png);
   background-size: cover;
@@ -14,6 +15,7 @@ const PageBackgroundStyles = styled("div")`
   color: #563752;
 `
 const BackgroundFadeStyles = styled("div")`
+  min-height: 100vh;
   filter: saturate(100%);
   background-color: rgba(207, 194, 155, 0.9);
   ${"" /* background-color: rgba(227, 214, 175, 0.9); */}
@@ -21,10 +23,19 @@ const BackgroundFadeStyles = styled("div")`
   text-align: center;
 `
 const ContentStyles = styled("div")`
-  height: 100%;
   max-width: 1050px;
-  margin: 25px auto 00px;
+  margin: 80px auto 00px;
+  padding: 20 0 50px;
   text-shadow: 0px 0px 3px white;
+`
+
+const FooterStyles = styled("footer")`
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  padding: 20px 0;
 `
 
 export default function Layout({ children }) {
@@ -36,14 +47,17 @@ export default function Layout({ children }) {
           styles={css`
             :root {
               --dark-purple: #563752;
-              --purple-transparent: rgba(86,55,82, 0.7);
+              --purple-transparent: rgba(86, 55, 82, 0.7);
               --tan: rgb(226, 218, 195);
               --tan-transparent: rgba(226, 218, 195, 0.7);
-              --header-height: calc(60.5px + 25px); //the margin set on ContentStyles
-              --adjust-page-vh: calc(100vh - var(--header-height))
+              --header-height: calc(
+                60.5px + 25px
+              ); //the margin set on ContentStyles
+              --adjust-page-vh: calc(100vh - var(--header-height));
             }
             html {
               height: 100vh;
+              position: relative;
               margin: 0;
             }
             body {
@@ -54,6 +68,9 @@ export default function Layout({ children }) {
           `}
         />
         <ContentStyles>{children}</ContentStyles>
+        <FooterStyles>
+          &copy; Waterdeep Weaver Design, Co - All rights reserved.
+        </FooterStyles>
       </BackgroundFadeStyles>
     </PageBackgroundStyles>
   )

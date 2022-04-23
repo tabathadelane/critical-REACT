@@ -2,25 +2,34 @@ import React from "react"
 import Layout from "../components/layout"
 import styled from "@emotion/styled"
 
-import useForm from "../utils/use-form"
+import useForm, { submitForm } from "../utils/use-form"
 import { REGIONS } from "../utils/all-regions"
 
 import { FaSkullCrossbones } from "react-icons/fa"
 
-const ContactStyles = styled("div")`
-  min-height: var(--adjust-page-vh);
+const ContactStyles = styled("form")`
   --input-height: 2rem;
   width: 500px;
   margin: auto;
   text-align: left;
-  legend  {
+  legend {
     font-size: 24px;
     margin: auto;
-    margin-bottom: 1rem;;
+    margin-bottom: 1rem;
+  }
+  input:-webkit-autofill,
+  input:-webkit-autofill:hover,
+  input:-webkit-autofill:focus {
+    filter: none;
+    border: 0.5px solid var(--dark-purple) !important;
+    color: var(--dark-purple) !important;
+    -webkit-text-fill-color: var(--dark-purple) !important;
+    -webkit-box-shadow: 0 0 0px 1000px var(--tan) inset !important;
   }
   input,
   select,
-  textarea, label {
+  textarea,
+  label {
     background-color: var(--tan-transparent);
     margin: auto;
     font-family: "Gideon Roman";
@@ -29,33 +38,36 @@ const ContactStyles = styled("div")`
     color: var(--dark-purple);
     font-weight: bold;
   }
-  input, select, textarea {
+  input,
+  select,
+  textarea {
     width: 100%;
     margin-bottom: var(--input-height);
-    padding: 0 ;
+    padding: 0;
     border: none;
     border-radius: 4px;
     text-indent: 5px;
-    ::placeholder{
+    ::placeholder {
       color: rgba(50, 25, 0, 0.4);
     }
   }
-  input, select {
+  input,
+  select {
     height: var(--input-height);
   }
-  select{
+  select {
     color: rgba(50, 25, 0, 0.6);
   }
   textarea {
     height: 4rem;
   }
-  label { 
+  label {
     display: block;
-    margin-bottom: .5rem;
+    margin-bottom: 0.5rem;
     background: unset;
     text-shadow: 0.25px 0 var(--dark-purple);
   }
-  #checkbox-label{
+  #checkbox-label {
     position: relative;
     margin-bottom: var(--input-height);
     line-height: var(--input-height);
@@ -70,7 +82,7 @@ const ContactStyles = styled("div")`
     cursor: pointer;
     opacity: 0;
     width: 0;
-    height: 0;  
+    height: 0;
   }
   #checkmark {
     position: absolute;
@@ -79,34 +91,33 @@ const ContactStyles = styled("div")`
     right: 0;
     height: 2rem;
     width: 4rem;
-    -webkit-transition: .4s;
-    transition: .4s;    
-    background-color: rgb(255,251,235);
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+    background-color: rgb(255, 251, 235);
     border-radius: 4px;
     :before {
       position: absolute;
       content: "";
       height: 1.6rem;
       width: 1.6rem;
-      left: .2rem;
-      bottom: .2rem;
+      left: 0.2rem;
+      bottom: 0.2rem;
       background-color: var(--tan-transparent);
-      -webkit-transition: .4s;
+      -webkit-transition: 0.4s;
       border-radius: 4px;
-      transition: .4s;
+      transition: 0.4s;
     }
   }
-  
+
   #emergency:checked + #checkmark {
-  background-color: #6e2525;
+    background-color: #6e2525;
   }
 
   #emergency:checked + #checkmark:before {
     -webkit-transform: translateX(var(--input-height));
     -ms-transform: translateX(var(--input-height));
-    transform: translateX(var(--input-height));  
+    transform: translateX(var(--input-height));
   }
-
 
   button {
     cursor: pointer;
@@ -120,34 +131,33 @@ const ContactStyles = styled("div")`
     :hover {
       background: var(--dark-purple);
       color: var(--tan);
-      color: 
+      color: ;
     }
   }
   fieldset {
     padding: 20px;
     margin: auto;
     background-color: rgba(207, 194, 155, 0.45);
-  border: 6px ridge burlywood;
-  border-radius: 8px;
-  box-shadow: 3px 5px 8px 3px rgba(50, 25, 0, 0.6);
-}
+    border: 6px ridge burlywood;
+    border-radius: 8px;
+    box-shadow: 3px 5px 8px 3px rgba(50, 25, 0, 0.6);
+  }
 `
 
 const Contact = () => {
-
   const { values, updateValue } = useForm({
     name: "",
     help: "",
     town: "",
-    region: "",
+    region: "waterdeep",
     emergency: "false",
   })
 
-
+  const { submitForm } = useForm(values)
 
   return (
     <Layout>
-      <ContactStyles>
+      <ContactStyles onSubmit={submitForm}>
         <fieldset>
           <legend> How can we help you?</legend>
           <label htmlFor="name">Who is our point of contact?</label>
@@ -172,16 +182,15 @@ const Contact = () => {
           />
 
           <label htmlFor="region">Region</label>
-          <select 
-            id="region" 
-            name="region" 
-            required             
+          <select
+            id="region"
+            name="region"
+            required
             value={values.region}
-            onChange={updateValue}>
-            {REGIONS.map((region) => {
-              
-            return <option value={region.value}>{region.title}</option>
-
+            onChange={updateValue}
+          >
+            {REGIONS.map(region => {
+              return <option value={region.value}>{region.title}</option>
             })}
           </select>
 
@@ -195,9 +204,8 @@ const Contact = () => {
             required
           ></textarea>
           <label id="checkbox-label" htmlFor="emergency">
-          <FaSkullCrossbones />
-          Is someone in immediate danger? 
-
+            <FaSkullCrossbones />
+            Is someone in immediate danger?
             <input
               type="checkbox"
               id="emergency"
@@ -208,7 +216,9 @@ const Contact = () => {
             <span id="checkmark"></span>
           </label>
 
-          <button type="submit" value="Submit">Send request</button>
+          <button type="submit" value="Submit">
+            Send request
+          </button>
         </fieldset>
       </ContactStyles>
     </Layout>

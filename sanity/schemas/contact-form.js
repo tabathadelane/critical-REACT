@@ -56,10 +56,23 @@ export default {
         {
             name: 'emergency',
             title: 'Is this an emergency?',
-            type: 'boolean',
+            type: 'string',
+            options: {
+                list: [
+                    {value: 'true', title: 'True'},
+                    {value: 'false', title: 'False'},
+                ],
+            },
             description: 'Only select this if someone is in immediate danger',
-            initialValue: false,           
+            initialValue: "false",
         },
+        // {
+        //     name: 'emergency',
+        //     title: 'Is this an emergency?',
+        //     type: 'boolean',
+        //     description: 'Only select this if someone is in immediate danger',
+        //     initialValue: false,
+        // },
         {
             name: 'date',
             title: 'Date Submitted',
@@ -134,7 +147,7 @@ preview: {
         return {
             title: `${fields.name} in ${fields.region.charAt(0).toUpperCase() + fields.region.slice(1)}`,
             subtitle: fields.date,
-            media: () => fields.emergency ? '🚨' : '📫',
+            media: () => fields.emergency === "true" ? '🚨' : '📫',
         }
     },
 },

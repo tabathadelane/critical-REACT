@@ -4,9 +4,10 @@ import Layout from "../components/layout"
 import styled from "@emotion/styled"
 
 const PartyStyles = styled("div")`
-  min-height:var(--adjust-page-vh);
   font-size: 32px;
-  p {margin-top: 0;}
+  p {
+    margin-top: 0;
+  }
 `
 
 const TheParty = () => {
