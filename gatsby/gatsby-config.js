@@ -3,7 +3,7 @@
  *
  * See: https://www.gatsbyjs.com/docs/gatsby-config/
  */
-const dotenv = require("dotenv")
+import dotenv from "dotenv"
 
 dotenv.config({ path: ".env" })
 
