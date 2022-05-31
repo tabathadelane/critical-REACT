@@ -3,11 +3,11 @@
  *
  * See: https://www.gatsbyjs.com/docs/gatsby-config/
  */
-import dotenv from "dotenv"
+const dotenv = require("dotenv")
 
 dotenv.config({ path: ".env" })
 
-export default {
+module.exports = {
   siteMetadata: {
     title: `Critical Reactions`,
     description: `Providing Minor Solutions to Major Problems!`,
