@@ -162,7 +162,7 @@ const BioInfoStyles = styled("p")`
 `
 
 const IsMemberAliveStyles = ({ each, rip }) => {
-  console.log(each)
+  // console.log(each)
   const classColorsList = {
     barbarian: "#E7623E",
     bard: "#AB6DAC",

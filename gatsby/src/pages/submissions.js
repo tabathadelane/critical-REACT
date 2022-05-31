@@ -67,7 +67,6 @@ const Submissions = ({
   },
 }) => {
   function Icon({ isEmergency }) {
-    console.log(isEmergency)
     if (isEmergency === "true") {
       return <IoSkullSharp class="submission-icon icon-e" />
     }

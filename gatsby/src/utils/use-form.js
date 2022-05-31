@@ -21,12 +21,11 @@ export default function useForm(defaults) {
 
   async function submitForm(e) {
     e.preventDefault()
-    console.log("SUBMIT")
-    console.log("E", e.target.emergency.value)
+    // console.log("SUBMIT")
+    // console.log("E", e.target.emergency.value)
     const value = e.target
     const date = new Date().toISOString()
-    console.log(date)
-    console.log(process.env.GATSBY_SANITY_HTTP_TOKEN)
+    // console.log(date)
 
     const res = await fetch(
       "https://wquwjb1d.api.sanity.io/v2022-03-18/data/mutate/production",
@@ -54,15 +53,15 @@ export default function useForm(defaults) {
       }
     )
     let resJson = await res.json()
-    console.log("Res", resJson)
+    // console.log("Res", resJson)
 
     if (res.status >= 400 && res.status < 600) {
-      console.log("Error-----------------", resJson)
+      // console.log("Error-----------------", resJson)
       alert(
         "there was an error with the form. Please try again at a lter time."
       )
     } else {
-      console.log("We received your order!")
+      // console.log("We received your order!")
       window.alert(
         "We've received your request and will venture to your region as soon as we can!"
       )
