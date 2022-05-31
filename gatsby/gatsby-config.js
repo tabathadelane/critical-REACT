@@ -3,12 +3,11 @@
  *
  * See: https://www.gatsbyjs.com/docs/gatsby-config/
  */
- import dotenv from 'dotenv';
+import dotenv from "dotenv"
 
- dotenv.config({ path: '.env' });
+dotenv.config({ path: ".env" })
 
 export default {
-  
   siteMetadata: {
     title: `Critical Reactions`,
     description: `Providing Minor Solutions to Major Problems!`,
@@ -32,14 +31,13 @@ export default {
     },
     `gatsby-plugin-emotion`,
     {
-      resolve: 'gatsby-source-sanity',
+      resolve: "gatsby-source-sanity",
       options: {
-        projectId: 'wquwjb1d',
-        dataset: 'production',
+        projectId: "wquwjb1d",
+        dataset: "production",
         watchMode: true,
         token: process.env.SANITY_TOKEN,
-      }
-
+      },
     },
   ],
-};
+}

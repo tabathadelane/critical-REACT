@@ -32,7 +32,6 @@ const ImageStyles = styled("div")`
 
   > img {
     height: inherit;
-    filter: sepia(0.4) hue-rotate(-15deg) contrast(0.9);
     ${"" /* border: 10px ridge rgb(245, 239, 223); */}
   }
 `

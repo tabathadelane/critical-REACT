@@ -5,6 +5,7 @@ import Header from "./header"
 
 const PageBackgroundStyles = styled("div")`
   min-height: 100vh;
+  font-size: 32px;
   background-attachment: fixed;
   background: url(/images/background-pattern.png);
   background-size: cover;
@@ -23,7 +24,7 @@ const BackgroundFadeStyles = styled("div")`
   text-align: center;
 `
 const ContentStyles = styled("div")`
-  max-width: 1050px;
+  max-width: 1200px;
   margin: 80px auto 00px;
   padding: 20 0 50px;
   text-shadow: 0px 0px 3px white;
@@ -31,6 +32,7 @@ const ContentStyles = styled("div")`
 
 const FooterStyles = styled("footer")`
   position: absolute;
+  font-size: 16px;
   left: 0;
   bottom: 0;
   width: 100%;
@@ -64,6 +66,10 @@ export default function Layout({ children }) {
               min-height: 100vh;
               margin: 0;
               padding: 0;
+            }
+            img {
+              filter: sepia(0.4) contrast(0.9);
+              ${"" /* filter: sepia(0.4) hue-rotate(-15deg) contrast(0.9); */}
             }
           `}
         />
