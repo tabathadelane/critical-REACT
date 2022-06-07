@@ -62,7 +62,10 @@ const quoteList = [
       "They were the heroes I needed when my brain was nearly sucked out by a mindflayer.",
   },
   { author: "Bill", quote: "Goo goo gaa gaa." },
-  { author: "Ghost of Glom", quote: "They saved me, but then I died anyways." },
+  {
+    author: "Glom, right before he died",
+    quote: "They saved me from Undermountain!",
+  },
   {
     author: "Vernis",
     quote:
