@@ -4,6 +4,8 @@ import { Global, css } from "@emotion/react"
 import styled from "@emotion/styled"
 import Header from "./header.js"
 
+import { FrizQuadrataRegular, futur2, korinan, Masquerade } from "./fonts.js"
+
 const Wrapper = styled("div")`
   padding: 10px;
 `
@@ -13,7 +15,8 @@ export default function Layout({ children }) {
       <Header />
       <Global
         styles={css`
-          @font-face {
+          ${
+            "" /* @font-face {
             font-family: "Korinan";
             src: local("korinan"),
               url("../fonts/korinan.ttf") format("truetype");
@@ -31,6 +34,24 @@ export default function Layout({ children }) {
             font-family: "Masq";
             src: local("Masquerade"),
               url("../fonts/Masquerade.ttf") format("truetype");
+          } */
+          }
+          @font-face {
+            font-family: "Korinan";
+            src: local("korinan"), url(${korinan}) format("truetype");
+          }
+          @font-face {
+            font-family: "Futura";
+            src: local("futur2"), url(${futur2}) format("truetype");
+          }
+          @font-face {
+            font-family: "Friz";
+            src: local("FrizQuadrataRegular"),
+              url(${FrizQuadrataRegular}) format("truetype");
+          }
+          @font-face {
+            font-family: "Masq";
+            src: local("Masquerade"), url(${Masquerade}) format("truetype");
           }
           body {
             font-family: "Korinan", serif;
@@ -90,7 +111,6 @@ export default function Layout({ children }) {
             font-size: 48px;
           }
 
-
           .about-flex {
             padding-top: 20px;
             display: flex;
@@ -124,10 +144,10 @@ export default function Layout({ children }) {
             white-space: pre;
             pointer-events: visible;
             all: unset;
-            cursor: pointer;  
+            cursor: pointer;
             &:hover {
               background-color: lightgrey;
-            }          
+            }
           }
 
           .flex-container {

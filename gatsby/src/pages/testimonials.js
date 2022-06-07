@@ -9,21 +9,18 @@ import {
 } from "react-icons/ri"
 
 const TestimonialsStyles = styled("div")`
-  padding-bottom: 100px;
+  padding: 0 30px 100px;
   > div:nth-child(even) {
-    margin-left: 200px;
+    margin-left: auto;
   }
   h1 {
-    font-family: "Montserrat";
-
-    text-align: left;
     padding-bottom: 30px;
   }
 `
 const QuoteStyles = styled("div")`
   font-size: 20px;
   background-color: rgba(207, 194, 155, 0.45);
-  width: 800px;
+  width: 70%;
   margin: 0 0 40px;
   padding: 20px;
   text-align: left;

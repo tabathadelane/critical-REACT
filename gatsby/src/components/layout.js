@@ -25,19 +25,27 @@ const BackgroundFadeStyles = styled("div")`
 `
 const ContentStyles = styled("div")`
   max-width: 1200px;
-  margin: 80px auto 00px;
-  padding: 20 0 50px;
+  margin: 50px auto 0px;
+  padding: 0 0 100px;
   text-shadow: 0px 0px 3px white;
+
+  h1 {
+    font-size: 2rem;
+    text-align: center;
+    text-decoration: underline;
+    text-transform: uppercase;
+  }
 `
 
 const FooterStyles = styled("footer")`
   position: absolute;
   font-size: 16px;
   left: 0;
+  right: 0;
   bottom: 0;
-  width: 100%;
+  display: block;
   text-align: center;
-  padding: 20px 0;
+  padding: 20px;
 `
 
 export default function Layout({ children }) {

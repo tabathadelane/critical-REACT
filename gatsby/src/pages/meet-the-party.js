@@ -8,7 +8,7 @@ import classSVGs from "../utils/class-svgs"
 
 const breakpoints = {
   smallScreens: "3000px",
-  mobile: "500px",
+  mobile: "600px",
 }
 
 const MeetUsStyles = styled("div")`
@@ -43,7 +43,7 @@ const BioFrameStyles = styled("div")`
     "img name icon"
     "img role icon"
     "race interests interests"
-    "class subclass subclass"
+    "class class class"
     "bio bio bio";
 
   @media (max-width: ${breakpoints.smallScreens}) {
@@ -55,7 +55,7 @@ const BioFrameStyles = styled("div")`
       "role role role"
       "img . icon"
       "race interests interests"
-      "class subclass subclass"
+      "class class class"
       "bio bio bio";
   }
   @media (max-width: ${breakpoints.mobile}) {
@@ -103,12 +103,7 @@ const BioFrameStyles = styled("div")`
   }
   #class {
     grid-area: class;
-    justify-self: end;
-  }
-  #subclass {
-    margin-left: 8px;
-    grid-area: subclass;
-    justify-self: start;
+    justify-self: center;
   }
   #bio {
     grid-area: bio;
@@ -203,9 +198,6 @@ const IsMemberAliveStyles = ({ each, rip }) => {
       <BioInfoStyles id="class">
         <b>Class:</b> {each.class.charAt(0).toUpperCase() + each.class.slice(1)}
         {" -  "}
-      </BioInfoStyles>
-      <BioInfoStyles id="subclass">
-        {"  "}
         {each.subclass}
       </BioInfoStyles>
       <BioInfoStyles id="interests">

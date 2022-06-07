@@ -9,11 +9,13 @@ import { FaSkullCrossbones } from "react-icons/fa"
 
 const ContactStyles = styled("form")`
   --input-height: 2rem;
-  width: 500px;
+  max-width: 500px;
   margin: auto;
+  padding: 0 30px;
   text-align: left;
   legend {
     font-size: 24px;
+    text-align: center;
     margin: auto;
     margin-bottom: 1rem;
   }
@@ -59,23 +61,27 @@ const ContactStyles = styled("form")`
     color: rgba(50, 25, 0, 0.6);
   }
   textarea {
-    height: 4rem;
+    height: 6rem;
+    margin-top: 10px;
   }
   label {
     display: block;
-    margin-bottom: 0.5rem;
     background: unset;
     text-shadow: 0.25px 0 var(--dark-purple);
   }
   #checkbox-label {
     position: relative;
+    display: flex;
     margin-bottom: var(--input-height);
     line-height: var(--input-height);
-
     width: 100%;
+
     svg {
-      font-size: 1rem;
-      margin-right: 10px;
+      font-size: 18px;
+      margin: auto 10px auto 0;
+    }
+    p {
+      padding-right: 75px;
     }
   }
   #emergency {
@@ -87,8 +93,10 @@ const ContactStyles = styled("form")`
   #checkmark {
     position: absolute;
     cursor: pointer;
+    margin: auto 0;
     top: 0;
     right: 0;
+    bottom: 0;
     height: 2rem;
     width: 4rem;
     -webkit-transition: 0.4s;
@@ -205,7 +213,7 @@ const Contact = () => {
           ></textarea>
           <label id="checkbox-label" htmlFor="emergency">
             <FaSkullCrossbones />
-            Is someone in immediate danger?
+            <p>Is someone in immediate danger?</p>
             <input
               type="checkbox"
               id="emergency"

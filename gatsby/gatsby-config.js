@@ -17,6 +17,12 @@ module.exports = {
 
   plugins: [
     {
+      resolve: "gatsby-plugin-manifest",
+      options: {
+        icon: "static/favicon.svg",
+      },
+    },
+    {
       resolve: `gatsby-plugin-mdx`,
       options: {
         extensions: [`.mdx`, `.md`],

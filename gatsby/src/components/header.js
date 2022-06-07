@@ -14,9 +14,6 @@ const HeaderStyles = styled("header")`
   margin: 0;
   padding: 0;
   box-shadow: 2px 4px 8px 3px rgba(50, 25, 0, 0.4);
-
-  ${"" /* border-bottom: solid 10px burlywood; */}
-  ${"" /* border-bottom: solid 5px var(--dark-purple); */}
 `
 const TitleStyles = styled("h1")`
   font-size: 32px;
@@ -65,22 +62,24 @@ const Header = () => {
     <HeaderStyles>
       <div>
         <TitleStyles>
-          <p 
+          <p
             css={css`
-            font-size: 12px;
-            > a {
-              text-decoration: none; 
-              color: var(--tan-transparent); 
+              font-size: 12px;
+              > a {
+                text-decoration: none;
+                color: var(--tan-transparent);
               }
-            `}>
+            `}
+          >
             <Link to="/submissions">*</Link>
-          </p>{title}
+          </p>
+          {title}
         </TitleStyles>
         {/* <p class="">{description}</p> */}
       </div>
       <NavStyles
         css={css`
-          margin: 0 100px;
+          margin: 0 10px;
         `}
       >
         <ul>
@@ -96,14 +95,13 @@ const Header = () => {
           <NavItemStyles>
             <Link to="/contact-us">Call for aid</Link>
           </NavItemStyles>
-        </ul>
-      </NavStyles>
-      <NavStyles>
-        <ul>
           <NavItemStyles>
             <Link to="/blog">Altheas Journal of Sending &rarr;</Link>
           </NavItemStyles>
         </ul>
+      </NavStyles>
+      <NavStyles>
+        <ul></ul>
       </NavStyles>
     </HeaderStyles>
   )
