@@ -224,7 +224,7 @@ const Contact = () => {
             <span id="checkmark"></span>
           </label>
 
-          <button type="submit" value="Submit">
+          <button class="pop" type="submit" value="Submit">
             Send request
           </button>
         </fieldset>

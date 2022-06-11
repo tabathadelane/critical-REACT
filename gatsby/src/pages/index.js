@@ -143,11 +143,13 @@ const HomePage = () => {
         </SloganStyles>
         <BlurbStyles id="blurb2">
           Welcome to our home on the World Wide Weave where you get to know more
-          about us or inquire about help. We are very experienced and posssess a
+          about us or inquire about help. We are very experienced and possess a
           wide range of talents and knowledge.
         </BlurbStyles>
         <MeetButtonStyles id="button">
-          <Link to="/meet-the-party">MEET US</Link>
+          <Link className="pop" to="/meet-the-party">
+            MEET US
+          </Link>
         </MeetButtonStyles>
       </GridStyles>
     </Layout>
