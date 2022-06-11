@@ -224,7 +224,12 @@ const Contact = () => {
             <span id="checkmark"></span>
           </label>
 
-          <button class="pop" type="submit" value="Submit">
+          <button
+            aria-label="submit form"
+            class="pop"
+            type="submit"
+            value="Submit"
+          >
             Send request
           </button>
         </fieldset>

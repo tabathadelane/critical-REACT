@@ -36,7 +36,11 @@ const BlogPost = ({ data }) => {
           </Link>
           <h2>{frontmatter.title}</h2>
           <p>
-            <button class="pre" title={frontmatter.familiarDate}>
+            <button
+              aria-label={"convert Faerun date to" + frontmatter.familiarDate}
+              class="pre"
+              title={frontmatter.familiarDate}
+            >
               Date: {frontmatter.month} {frontmatter.day}
             </button>
           </p>

@@ -118,6 +118,7 @@ const Overlay = ({ overlayOpen, setOverlayOpen }) => {
           Althea's Blog &rarr;
         </Link>
         <button
+          aria-label="Close mobile menu"
           overlayOpen={overlayOpen}
           onClick={() => setOverlayOpen(!overlayOpen)}
         >

@@ -162,6 +162,7 @@ const Header = () => {
           </ul>
         </NavStyles>
         <button
+          aria-label="Open mobile menu"
           overlayOpen={overlayOpen}
           onClick={() => {
             setOverlayOpen(!overlayOpen)
