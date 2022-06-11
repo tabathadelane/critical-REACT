@@ -26,10 +26,11 @@ const NavStyles = styled("div")`
   font-family: "Gideon Roman";
   text-transform: uppercase;
   font-size: 24px;
+  opacity: 0.95;
 
   a {
     display: block;
-    padding: 20px 0;
+    padding: 25px 0;
     text-decoration: none;
     color: black;
     :focus {
@@ -38,10 +39,13 @@ const NavStyles = styled("div")`
     }
   }
 
-  hr {
+  .line {
     width: 50%;
-    border: solid var(--dark-purple) 2px;
-    border-border-radius: 20px;
+    margin: auto;
+    border: solid var(--dark-purple) 1px;
+    border-radius: 13px;
+    height: 3px;
+    background: var(--dark-purple);
   }
 
   button {
@@ -81,7 +85,7 @@ const Overlay = ({ overlayOpen, setOverlayOpen }) => {
         >
           Home
         </Link>
-        <hr />
+        <div className="line" />
         <Link
           overlayOpen={overlayOpen}
           onClick={() => setOverlayOpen(!overlayOpen)}
@@ -89,7 +93,7 @@ const Overlay = ({ overlayOpen, setOverlayOpen }) => {
         >
           Meet Us
         </Link>
-        <hr />
+        <div className="line" />
         <Link
           overlayOpen={overlayOpen}
           onClick={() => setOverlayOpen(!overlayOpen)}
@@ -97,7 +101,7 @@ const Overlay = ({ overlayOpen, setOverlayOpen }) => {
         >
           Testimonials
         </Link>
-        <hr />
+        <div className="line" />
         <Link
           overlayOpen={overlayOpen}
           onClick={() => setOverlayOpen(!overlayOpen)}
@@ -105,7 +109,7 @@ const Overlay = ({ overlayOpen, setOverlayOpen }) => {
         >
           Call for aid
         </Link>
-        <hr />
+        <div className="line" />
         <Link
           overlayOpen={overlayOpen}
           onClick={() => setOverlayOpen(!overlayOpen)}
