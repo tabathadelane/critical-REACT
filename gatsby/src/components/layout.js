@@ -36,7 +36,7 @@ const ContentStyles = styled("div")`
   h1 {
     font-size: 2rem;
     text-align: center;
-    text-decoration: underline;
+    line-height: 2.5rem;
     text-transform: uppercase;
   }
 `
