@@ -10,12 +10,12 @@ import { GiScrollUnfurled } from "react-icons/gi"
 const HelpStyles = styled("div")`
   margin: auto;
   text-align: left;
-  padding-bottom: 100px;
+  padding: 0 40px 100px;
 `
 const SubFormatStyles = styled("div")`
   background-color: rgba(207, 194, 155, 0.45);
   margin: 0 auto 20px;
-  padding: 20px 0;
+  padding: 30px;
   text-align: left;
   border: 6px ridge burlywood;
   border-radius: 8px;
@@ -23,10 +23,14 @@ const SubFormatStyles = styled("div")`
   display: grid;
   justify-content: center;
   grid-template:
-    [row1-start] "s-icon s-title" 40px [row1-end]
-    [row2-start] "s-icon s-date" 30px [row2-end]
+    [row1-start] "s-icon s-title" auto [row1-end]
+    [row2-start] "s-icon s-date" auto [row2-end]
     [row3-start] "s-info s-info" auto [row3-end]
-    / 75px 900px;
+    / 65px 1fr;
+
+  @media (max-width: 525px) {
+    padding: 30px 15px;
+  }
 
   .submission-icon {
     margin: auto 0;
@@ -41,22 +45,26 @@ const SubFormatStyles = styled("div")`
   }
   .submission-title {
     font-size: 28px;
+    padding: 0 0 15px;
     grid-area: s-title;
   }
   .submission-date {
-    font-size: 20px;
+    font-size: 1.25rem;
+    opacity: 0.8;
     font-style: italic;
     display: flex;
+    flex-wrap: wrap-reverse;
     justify-content: space-between;
     column-gap: 50px;
     grid-area: s-date;
     p {
       margin: 0;
+      margin-bottom: 20px;
       padding: 0;
     }
   }
   .submission-info {
-    margin-top: 20px;
+    font-size: 1.5rem;
     grid-area: s-info;
   }
 `

@@ -10,7 +10,7 @@ const PageBackgroundStyles = styled("div")`
   background-attachment: fixed;
   background: url(/images/background-pattern.png);
   background-size: cover;
-  filter: saturate(0.8);
+  filter: saturate(0.7);
   background-repeat: repeat;
   background-size: 500px 500px;
   font-family: "Lato";
@@ -61,7 +61,7 @@ export default function Layout({ children }) {
           styles={css`
             :root {
               --dark-purple: #563752;
-              --purple-transparent: rgba(86, 55, 82, 0.7);
+              --purple-transparent: rgba(86, 55, 82, 0.8);
               --tan: rgb(226, 218, 195);
               --tan-transparent: rgba(226, 218, 195, 0.7);
               --header-height: calc(
