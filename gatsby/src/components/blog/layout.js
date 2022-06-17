@@ -1,15 +1,18 @@
-import React from "react"
-import { Link } from "gatsby"
-import { Global, css } from "@emotion/react"
-import styled from "@emotion/styled"
-import Header from "./header.js"
+import React from "react";
+import { Link } from "gatsby";
+import { Global, css } from "@emotion/react";
+import styled from "@emotion/styled";
+import Header from "./header.js";
 
-import { FrizQuadrataRegular, futur2, korinan, Masquerade } from "./fonts.js"
+import { FrizQuadrataRegular, futur2, korinan, Masquerade } from "./fonts.js";
 
 const Wrapper = styled("div")`
   padding: 10px;
-`
+  max-width: 1100px;
+`;
 export default function Layout({ children }) {
+  const SMALLER_PAGE_BREAKPOINT = "1200px";
+  const MOBILE_VIEW_BREAKPOINT = "800px";
   return (
     <Wrapper>
       <Header />
@@ -56,13 +59,20 @@ export default function Layout({ children }) {
           body {
             font-family: "Korinan", serif;
             margin: auto;
-            min-width: 800px;
             max-width: 1100px;
             background-color: #fefeff;
             ${"" /* border: 1px solid; */}
             padding: 0px 50px;
           }
-          .center {
+          aside {
+            @media (max-width: ${SMALLER_PAGE_BREAKPOINT}) {
+              margin: 50px auto 20px;
+              h4 {
+                margin: 20px 0;
+                font-size: 1.5em;
+                opacity: 0.7;
+              }
+            }
           }
           div {
             color: black;
@@ -94,16 +104,24 @@ export default function Layout({ children }) {
           }
 
           img {
-            padding: 5px 5px 2px 5px;
-            width: 300px;
             filter: hue-rotate(0deg) contrast(0.8) saturate(100%) grayscale(0.6)
               brightness(1);
           }
           .accolade {
-            padding: 20px 0 0 15px;
+            padding: 20px 0 0 5px;
+            opacity: 0.5;
+            margin: auto;
+            @media (max-width: ${SMALLER_PAGE_BREAKPOINT}) {
+            padding: 20px 0 0 ;
+              width: 80%;
+              margin-top: 10px;
+            }
+            @media (max-width: ${MOBILE_VIEW_BREAKPOINT}) {
+              margin-top: 30px;
+            }
           }
           .i-award {
-            fill: grey;
+            fill: #1155e2;
           }
           .about-title {
             text-align: center;
@@ -111,33 +129,61 @@ export default function Layout({ children }) {
             font-size: 48px;
           }
 
-          .about-flex {
+          .content-flex {
             padding-top: 20px;
             display: flex;
             flex-wrap: wrap;
             align-items: center;
             justify-content: center;
-            & p {
+          }
+          .bio {
               margin: 0 auto;
               padding: 0px 5px 0px 20px;
               line-height: 1.4;
               width: 375px;
-            }
+              @media (max-width: ${SMALLER_PAGE_BREAKPOINT}) {
+                margin-top: 2rem;
+                width: 80%;
+              }
+              @media (max-width: ${MOBILE_VIEW_BREAKPOINT}) {
+                margin-top: 2rem;
+                width: 95%;
+                text-align: center;
+              }
+
           }
           .photo-container {
             align-self: start;
-            width: 360px;
+            width: 50%;
+            width: 375px;
           }
           .photo-frame {
             border: 1px solid black;
-            margin: 10px;
-            & div {
+            padding: 10px;
+            div {
               text-align: center;
               text-justify: center;
               border: 6px solid #1155e2;
-              margin: 7px;
+              padding: 7px;
+            }
+            img {
+              width: 100%;
             }
           }
+
+          .blog-template {
+            width: 90%; 
+            margin: 0 auto;
+          }
+
+            .blog-styles {
+              p {
+                text-indent: 3rem;
+                line-height: 2rem;
+              }
+
+            }
+
 
           .pre {
             font-family: "Korinan", serif;
@@ -152,6 +198,11 @@ export default function Layout({ children }) {
 
           .flex-container {
             display: flex;
+          }
+          .flex-r {
+            @media (max-width: 800px) {
+              flex-wrap: wrap-reverse;
+            }
           }
 
           .title {
@@ -182,6 +233,11 @@ export default function Layout({ children }) {
             width: 250px;
             font-size: 12px;
             margin-right: 50px;
+            @media (max-width: ${MOBILE_VIEW_BREAKPOINT}) {
+              margin: 20px auto;
+              min-width: 250px;
+              width: 100%;
+            }
           }
           .link {
             text-decoration: underline;
@@ -202,11 +258,12 @@ export default function Layout({ children }) {
           .date {
             background-color: lightgray;
             margin-top: 5px;
-            font-size: 12px;
+            font-size: 1.2em;
           }
           .line {
             border-bottom: 4px solid black;
             padding-bottom: 10px;
+            font-size: 1.2em;
           }
           .line-thin {
             border-bottom: 2px solid black;
@@ -222,11 +279,25 @@ export default function Layout({ children }) {
             border-top: solid #ddd 1px;
             margin: 50px 10px 0;
             padding-top: 10px;
-          }
-          footer a,
-          footer p {
-            padding: 0px 20px;
+            @media (max-width: ${MOBILE_VIEW_BREAKPOINT}) {
+              margin: 2rem auto 10px;
+              width: 100%;
+              flex-wrap: wrap-reverse;
+              justify-content: center;
+              .hide {
+                display: none;
+              }
+            }
+          
+            a {
             color: #1155e2;
+            }
+          a,
+          div {
+              padding: 0px 20px;
+            @media (max-width: ${MOBILE_VIEW_BREAKPOINT}) {
+              margin-top: 20px;
+            }
           }
         `}
       />
@@ -234,8 +305,10 @@ export default function Layout({ children }) {
       <footer>
         <Link to="/">&#8592; Back to Critical Reactions</Link>
         <div>&copy; Althea Moonbrooke. All rights reserved.</div>
-        <Link to="/blog/archive">Archives</Link>
+        <Link class="hide" to="/blog/archive">
+          Archives
+        </Link>
       </footer>
     </Wrapper>
-  )
+  );
 }

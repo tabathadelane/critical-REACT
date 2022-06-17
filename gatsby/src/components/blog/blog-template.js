@@ -1,9 +1,9 @@
-import { graphql, Link } from "gatsby"
-import { MDXRenderer } from "gatsby-plugin-mdx"
-import React from "react"
+import { graphql, Link } from "gatsby";
+import { MDXRenderer } from "gatsby-plugin-mdx";
+import React from "react";
 
-import Layout from "./layout"
-import SideBar from "./side-bar"
+import Layout from "./layout";
+import SideBar from "./side-bar";
 
 export const query = graphql`
   query PostsByID($id: String!) {
@@ -20,17 +20,17 @@ export const query = graphql`
       }
     }
   }
-`
+`;
 
 const BlogPost = ({ data }) => {
-  const { frontmatter, body } = data.mdx
+  const { frontmatter, body } = data.mdx;
   return (
     <Layout>
-      <div class="flex-container">
+      <div class="flex-container flex-r">
         <div>
           <SideBar />
         </div>
-        <div>
+        <div class="blog-template">
           <Link to="/blog">
             <h4 class="link home-link">&lt;&lt;&lt; Back Home</h4>
           </Link>
@@ -44,11 +44,13 @@ const BlogPost = ({ data }) => {
               Date: {frontmatter.month} {frontmatter.day}
             </button>
           </p>
-          <MDXRenderer>{body}</MDXRenderer>
+          <div class="content-flex blog-styles">
+            <MDXRenderer>{body}</MDXRenderer>
+          </div>
         </div>
       </div>
     </Layout>
-  )
-}
+  );
+};
 
-export default BlogPost
+export default BlogPost;
