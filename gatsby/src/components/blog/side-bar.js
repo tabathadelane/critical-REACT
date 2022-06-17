@@ -34,10 +34,20 @@ const SideBar = () => {
 
   const DESKTOP_WINDOW_BREAKPOINT = 1200;
   const MOBILE_WINDOW_BREAKPOINT = 800;
-  let checkIsMobileView = () =>
-    window ? window.innerWidth < MOBILE_WINDOW_BREAKPOINT : false;
-  let checkIsDesktopView = () =>
-    window ? window.innerWidth > DESKTOP_WINDOW_BREAKPOINT : true;
+  let checkIsMobileView = () => {
+    if (typeof window !== `undefined`) {
+      window.innerWidth < MOBILE_WINDOW_BREAKPOINT;
+    } else {
+      return false;
+    }
+  };
+  let checkIsDesktopView = () => {
+    if (typeof window !== `undefined`) {
+      window.innerWidth > DESKTOP_WINDOW_BREAKPOINT;
+    } else {
+      return true;
+    }
+  };
   const [isDesktop, setIsDesktop] = useState(checkIsDesktopView);
 
   const [isMobile, setIsMobile] = useState(checkIsMobileView);
@@ -49,7 +59,7 @@ const SideBar = () => {
   };
 
   useEffect(() => {
-    if (window) {
+    if (typeof window !== `undefined`) {
       window.addEventListener("resize", updatePageWidth);
       return () => window.removeEventListener("resize", updatePageWidth);
     }
