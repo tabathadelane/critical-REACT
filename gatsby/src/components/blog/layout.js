@@ -7,12 +7,13 @@ import Header from "./header.js";
 import { FrizQuadrataRegular, futur2, korinan, Masquerade } from "./fonts.js";
 
 const Wrapper = styled("div")`
-  padding: 10px;
   max-width: 1100px;
+  padding: 10px 0;
 `;
 export default function Layout({ children }) {
   const SMALLER_PAGE_BREAKPOINT = "1200px";
-  const MOBILE_VIEW_BREAKPOINT = "800px";
+  const TABLET_VIEW_BREAKPOINT = "800px";
+  const MOBILE_VIEW_BREAKPOINT = "500px";
   return (
     <Wrapper>
       <Header />
@@ -62,15 +63,25 @@ export default function Layout({ children }) {
             max-width: 1100px;
             background-color: #fefeff;
             ${"" /* border: 1px solid; */}
-            padding: 0px 50px;
+            padding: 0px 25px;
+            @media (max-width: ${MOBILE_VIEW_BREAKPOINT}) {
+              padding: 0 0px;
+            }
+
           }
           aside {
             @media (max-width: ${SMALLER_PAGE_BREAKPOINT}) {
               margin: 50px auto 20px;
               h4 {
-                margin: 20px 0;
+                margin: 80px 10px 40px;
                 font-size: 1.5em;
                 opacity: 0.7;
+              }
+              .pad {
+                @media (max-width: ${MOBILE_VIEW_BREAKPOINT}) {
+                padding-left: 10px;
+                padding-right: 10px;
+                }
               }
             }
           }
@@ -112,11 +123,11 @@ export default function Layout({ children }) {
             opacity: 0.5;
             margin: auto;
             @media (max-width: ${SMALLER_PAGE_BREAKPOINT}) {
-            padding: 20px 0 0 ;
-              width: 80%;
+            padding:0 0 15px ;
+              width: 95%;
               margin-top: 10px;
             }
-            @media (max-width: ${MOBILE_VIEW_BREAKPOINT}) {
+            @media (max-width: ${TABLET_VIEW_BREAKPOINT}) {
               margin-top: 30px;
             }
           }
@@ -145,7 +156,8 @@ export default function Layout({ children }) {
                 margin-top: 2rem;
                 width: 80%;
               }
-              @media (max-width: ${MOBILE_VIEW_BREAKPOINT}) {
+              @media (max-width: ${TABLET_VIEW_BREAKPOINT}) {
+              padding: 0px 0 20px;
                 margin-top: 2rem;
                 width: 95%;
                 text-align: center;
@@ -154,8 +166,10 @@ export default function Layout({ children }) {
           }
           .photo-container {
             align-self: start;
-            width: 50%;
             width: 375px;
+            @media (max-width: ${MOBILE_VIEW_BREAKPOINT}) {
+              width: 95%;
+            }
           }
           .photo-frame {
             border: 1px solid black;
@@ -168,6 +182,15 @@ export default function Layout({ children }) {
             }
             img {
               width: 100%;
+            }
+            @media (max-width: ${MOBILE_VIEW_BREAKPOINT}) {
+              border: 0px;
+              div {
+
+              }
+              img {
+
+              }
             }
           }
 
@@ -211,13 +234,28 @@ export default function Layout({ children }) {
             color: #444;
             border: none;
             margin-bottom: 0px;
+            @media (max-width: ${MOBILE_VIEW_BREAKPOINT}) {
+              font-size: 40px;
+              padding: 0 10px;
+            }
+          }
+          .sub-title {
+            @media (max-width: ${MOBILE_VIEW_BREAKPOINT}) {
+              font-size: 14px;
+              padding: 0 20px;
+            }
+
           }
           .header {
-            margin-left: 10px;
             margin-bottom: 50px;
             background-color: #efefef;
             text-align: center;
             border: 2px solid black;
+            @media (max-width: ${MOBILE_VIEW_BREAKPOINT}) {
+              border-left: unset;
+              border-right: unset;
+            }
+
           }
           .header p {
             margin: 5px 0px;
@@ -233,7 +271,7 @@ export default function Layout({ children }) {
             width: 250px;
             font-size: 12px;
             margin-right: 50px;
-            @media (max-width: ${MOBILE_VIEW_BREAKPOINT}) {
+            @media (max-width: ${TABLET_VIEW_BREAKPOINT}) {
               margin: 20px auto;
               min-width: 250px;
               width: 100%;
@@ -279,7 +317,7 @@ export default function Layout({ children }) {
             border-top: solid #ddd 1px;
             margin: 50px 10px 0;
             padding-top: 10px;
-            @media (max-width: ${MOBILE_VIEW_BREAKPOINT}) {
+            @media (max-width: ${TABLET_VIEW_BREAKPOINT}) {
               margin: 2rem auto 10px;
               width: 100%;
               flex-wrap: wrap-reverse;
@@ -295,7 +333,7 @@ export default function Layout({ children }) {
           a,
           div {
               padding: 0px 20px;
-            @media (max-width: ${MOBILE_VIEW_BREAKPOINT}) {
+            @media (max-width: ${TABLET_VIEW_BREAKPOINT}) {
               margin-top: 20px;
             }
           }

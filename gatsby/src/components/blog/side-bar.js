@@ -29,21 +29,21 @@ const SideBar = () => {
   `);
 
   const sixPosts = data.allMdx.nodes;
-  const threePosts = data.allMdx.nodes.slice(0, 4);
-  console.log(sixPosts, threePosts);
+  const fourPosts = data.allMdx.nodes.slice(0, 4);
+  console.log(sixPosts, fourPosts);
 
   const DESKTOP_WINDOW_BREAKPOINT = 1200;
   const MOBILE_WINDOW_BREAKPOINT = 800;
   let checkIsMobileView = () => {
     if (typeof window !== `undefined`) {
-      window.innerWidth < MOBILE_WINDOW_BREAKPOINT;
+      return window.innerWidth < MOBILE_WINDOW_BREAKPOINT;
     } else {
       return false;
     }
   };
   let checkIsDesktopView = () => {
     if (typeof window !== `undefined`) {
-      window.innerWidth > DESKTOP_WINDOW_BREAKPOINT;
+      return window.innerWidth > DESKTOP_WINDOW_BREAKPOINT;
     } else {
       return true;
     }
@@ -70,17 +70,17 @@ const SideBar = () => {
       <h4>Most recent entries:</h4>
       <div>
         {isDesktop || isMobile
-          ? threePosts.map(({ excerpt, frontmatter, fields }) => (
+          ? fourPosts.map(({ excerpt, frontmatter, fields }) => (
               <section class="block  side-bar">
                 <Link to={fields.slug}>
-                  <h3 class="line-thin">{frontmatter.title}</h3>
-                  <p class="date futura">
+                  <h3 class="line-thin pad">{frontmatter.title}</h3>
+                  <p class="date futura pad">
                     <a title={frontmatter.familiarDate}>
                       {frontmatter.dayOfWeek} {frontmatter.month}{" "}
                       {frontmatter.day}, {frontmatter.year}
                     </a>
                   </p>
-                  <p class="line">{excerpt}</p>
+                  <p class="line pad">{excerpt}</p>
                 </Link>
               </section>
             ))
