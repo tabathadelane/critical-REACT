@@ -109,6 +109,9 @@ export default function Layout({ children }) {
             color: #1155e2;
             font-size: 24px;
           }
+          h4 {
+            font-size: 18px;
+          }
           a {
             text-decoration: none;
             color: black;
@@ -150,7 +153,7 @@ export default function Layout({ children }) {
           .bio {
               margin: 0 auto;
               padding: 0px 5px 0px 20px;
-              line-height: 1.4;
+              line-height: 2;
               width: 375px;
               @media (max-width: ${SMALLER_PAGE_BREAKPOINT}) {
                 margin-top: 2rem;
@@ -165,7 +168,6 @@ export default function Layout({ children }) {
 
           }
           .photo-container {
-            align-self: start;
             width: 375px;
             @media (max-width: ${MOBILE_VIEW_BREAKPOINT}) {
               width: 95%;
@@ -204,7 +206,42 @@ export default function Layout({ children }) {
                 text-indent: 3rem;
                 line-height: 2rem;
               }
+              h4 {
+                text-align: left;
+                color: #1155e2;
+                opacity: .9;
+                width: 100%;
+                
+              }
+              em {
+                opacity: .6;
+                text-align: left;
+              }
+              blockquote {
+                opacity: .9;
+                color: #1155e2;
+                margin: 1rem 0;
+                background: #eee;
+                border-radius: 6px;
+              padding: 1rem 2rem;
+              font-style: italic;
+              }
+              a {
+                color: #1155e2;
+                opacity: .8;
 
+              }
+              ul {
+               list-style-type: none;
+                li {
+                  padding-bottom: 1rem;
+                  ::before {
+                color: #1155e2;
+                content: "⟢    ";
+
+                  }
+                }
+              }
             }
 
 

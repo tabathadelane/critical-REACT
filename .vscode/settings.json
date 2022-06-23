@@ -22,6 +22,11 @@
   "prettier.disableLanguages": ["javascript", "javascriptreact"],
   "cSpell.words": [
     "burlywood",
-    "korinan"
-  ]
+    "Eleint",
+    "korinan",
+    "Waterdeep"
+  ],
+  "[mdx]": {
+    "editor.wordWrapColumn": 20
+  }
 }
