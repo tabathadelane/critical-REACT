@@ -4,7 +4,7 @@
 >
 > The internet is the next big magical phenomenon to come to Faerun! The seasoned and decorated group invites you to meet them and follow their journey.
 
-This site it an extention of altheas-blog (my first gatsby site) and a rebuild of critical-reactions (a repo built in Django and Vue.)
+This site it an extension of altheas-blog (my first gatsby site) and a rebuild of critical-reactions (a repo built in Django and Vue.)
 
 ### App Screenshot
 
@@ -16,4 +16,4 @@ _coming soon_
 
 - Make it pretty!
 
-- TBD
+- Set it free (in the cloud)
