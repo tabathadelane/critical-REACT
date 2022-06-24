@@ -205,6 +205,7 @@ export default function Layout({ children }) {
               p {
                 text-indent: 3rem;
                 line-height: 2rem;
+                width: 100%;
               }
               h4 {
                 text-align: left;

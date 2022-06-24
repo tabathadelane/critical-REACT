@@ -28,7 +28,7 @@ const About = () => {
             Ollahm Harp. I have piloted the Apparatus of Kwalish from the depths
             of a sunken city through a lake of ooze. And I have crawled my way
             back from the 3rd level of Hell after an attempt was made on our
-            lives to sacrifice us to a dark god. -- With our aquired riches, we
+            lives to sacrifice us to a dark god. -- With our acquired riches, we
             have constructed a beautiful manor where I host parties for all of
             the most import personalities in Waterdeep when we are between
             quests. While we are on the road, I will keep you updated on all of
@@ -52,7 +52,7 @@ const About = () => {
       </h4>
       <h4 class="accolade futura">
         <em>
-          <Award class="i-award" /> "Honorary Impressive Headpeices" Recepient
+          <Award class="i-award" /> "Honorary Impressive Headpieces" Recipient
           2021{" "}
         </em>
       </h4>
